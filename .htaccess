@@ -1,0 +1,20 @@
+Options -Indexes
+AddType application/wasm .wasm
+
+<FilesMatch "\.(?:dart|lock|md|sql|example|ya?ml|log|env)$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "^(?:pubspec\.yaml|pubspec\.lock|README(?:\.md)?|SECURITY-REVIEW\.md)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(?:backend|lib|test|android|ios|linux|macos|windows|assets|\.dart_tool|\.venv|\.vscode|docx_pdf)(?:/|$) - [F,END,NC]
+    RewriteRule ^build/web/.*\.(?:dart|lock|md|sql|example|ya?ml|log|env)$ - [F,END,NC]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^build/web/admin(?:/.*)?$ build/web/index.html [END]
+</IfModule>

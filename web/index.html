@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Berita terbaru Magelang, Jawa Tengah, e-paper harian, Kampung Inovatif, dan Koran Sekolah dari Magelang Ekspres.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#102c52">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="Magelang Ekspres">
+  <meta property="og:title" content="Magelang Ekspres | Berita Magelang & E-Paper Digital">
+  <meta property="og:description" content="Berita Magelang dan Jawa Tengah, e-paper harian, serta kisah Kampung Inovatif.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Magelang">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Magelang Ekspres | Berita Magelang &amp; E-Paper Digital</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #182332;
+      --navy: #102c52;
+      --red: #c8242f;
+      --paper: #f7f8fa;
+      --line: #d9dee6;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    #web-boot-screen { min-height: 100vh; background: var(--paper); }
+    .boot-ribbon { height: 5px; background: var(--red); }
+    .boot-masthead {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1180px;
+      min-height: 92px;
+      margin: 0 auto;
+      padding: 16px 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    .boot-brand { color: var(--navy); font-size: 27px; font-weight: 800; }
+    .boot-brand span { color: var(--red); font-style: italic; }
+    .boot-edition { color: #667386; font: 12px Arial, sans-serif; }
+    .boot-nav {
+      display: flex;
+      gap: 28px;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 15px 28px;
+      border-bottom: 1px solid var(--line);
+      color: var(--navy);
+      font: 700 11px Arial, sans-serif;
+    }
+    .boot-lead {
+      max-width: 1180px;
+      margin: 34px auto;
+      padding: 0 28px;
+    }
+    .boot-kicker { color: var(--red); font: 800 11px Arial, sans-serif; }
+    .boot-lead h1 {
+      max-width: 740px;
+      margin: 12px 0;
+      color: var(--navy);
+      font-size: 58px;
+      line-height: 1.04;
+    }
+    .boot-lead p { color: #667386; font: 15px/1.6 Arial, sans-serif; }
+
+    @media (max-width: 600px) {
+      .boot-masthead { min-height: 72px; padding: 12px 18px; }
+      .boot-brand { font-size: 22px; }
+      .boot-edition { display: none; }
+      .boot-nav { gap: 18px; overflow: hidden; padding: 13px 18px; }
+      .boot-lead { margin: 26px auto; padding: 0 18px; }
+      .boot-lead h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    (function () {
+      const url = new URL(window.location.href);
+      const path = url.pathname.replace(/\/+$/, '');
+      if (
+        url.searchParams.get('admin') !== '1' &&
+        !path.endsWith('/admin') &&
+        !path.endsWith('/admin/login')
+      ) {
+        return;
+      }
+      url.searchParams.set('admin', '1');
+      window.history.replaceState(
+        {},
+        '',
+        `${url.pathname}${url.search}${url.hash}`,
+      );
+    })();
+  </script>
+  <main id="web-boot-screen" aria-label="Magelang Ekspres">
+    <div class="boot-ribbon"></div>
+    <header class="boot-masthead">
+      <div class="boot-brand">MAGELANG <span>EKSPRES</span></div>
+      <div class="boot-edition">BERITA DAERAH • E-PAPER DIGITAL</div>
+    </header>
+    <nav class="boot-nav" aria-label="Navigasi utama">
+      <span>BERANDA</span><span>MAGELANG</span><span>JAWA TENGAH</span><span>E-PAPER</span>
+    </nav>
+    <section class="boot-lead">
+      <div class="boot-kicker">KABAR TERKINI</div>
+      <h1>Magelang Ekspres</h1>
+      <p>Berita Magelang, Jawa Tengah, dan e-paper harian.</p>
+    </section>
+  </main>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      document.getElementById('web-boot-screen')?.remove();
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

@@ -1,0 +1,896 @@
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 1
+ BLUEPRINT TEKNIS APLIKASI &
+ WEBSITE
+KORAN DIGITAL MAGELANG
+ EKSPRES
+ Dokumen spesifikasi siap-coding untuk tim IT, redaksi,
+ manajemen produk, QA, dan vendor pengembang
+Disusun berdasarkan rancangan konsep produk Koran Digital Magelang Ekspres serta acuan e-paper
+ aktual edisi Senin, 29 Juni 2026.
+ Versi: 1.0   |   Format: Technical Product Blueprint   |   Output: PDF
+Objek Dokumen
+Aplikasi mobile Android/iOS, website berita, CMS redaksi, sistem e-paper,
+paywall, dan langganan.
+Model Bisnis
+Freemium-paywall dengan paket 1 bulan, 3 bulan, 6 bulan, dan 1 tahun.
+Harga Paket Awal
+1 bulan Rp49.000; 3 bulan Rp129.000; 6 bulan Rp249.000; 1 tahun
+Rp499.000.
+Prioritas
+MVP yang stabil, aman, mudah dipakai redaksi, dan siap dikembangkan ke
+Play Store serta App Store.
+Prinsip utama: paywall harus berbasis server-side, konten premium tidak boleh bocor ke pengguna nonaktif, PDF
+e-paper harus diamankan dengan signed URL dan watermark, serta CMS harus mengikuti alur kerja redaksi
+harian.
+
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 2
+Daftar Isi
+ 1. Ringkasan Eksekutif
+ 2. Sasaran Produk dan Batasan Pengembangan
+ 3. Arsitektur Sistem
+ 4. Modul dan Hak Akses Pengguna
+ 5. Struktur Database Siap Implementasi
+ 6. API Contract dan Response Standard
+ 7. Paywall, Subscription, dan Pembayaran
+ 8. E-Paper, Mode Baca, Watermark, dan Download
+ 9. Frontend Mobile dan Website
+ 10. CMS Redaksi dan Dashboard Operasional
+ 11. Keamanan, Logging, dan Audit Trail
+ 12. Testing, Acceptance Criteria, dan Definition of Done
+ 13. Sprint Plan dan Backlog Developer
+ 14. Lampiran Visual UI/UX dan Acuan E-Paper
+ 
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 3
+1. Ringkasan Eksekutif
+Koran Digital Magelang Ekspres harus dibangun sebagai ekosistem media digital berlangganan, bukan
+sekadar website berita atau aplikasi baca PDF. Produk inti mencakup aplikasi mobile, website responsif,
+CMS redaksi, sistem langganan, e-paper harian, mode baca artikel, paywall, dan keamanan konten
+premium.
+Model akses yang dipakai adalah freemium-paywall: pengunjung umum bisa melihat judul, ringkasan,
+kategori, thumbnail blur, dan ajakan berlangganan; pelanggan aktif dapat membuka artikel penuh, foto
+tanpa blur, e-paper, mode baca, arsip, download PDF, dan fitur personal.
+Dokumen ini memecah rancangan ke dalam spesifikasi teknis agar tim IT dapat mulai membuat
+database migration, API endpoint, tampilan mobile, website, CMS, sistem pembayaran, dan skenario
+testing tanpa menafsirkan ulang konsep dari awal.
+Output produk final
+ - Aplikasi Android dan iOS yang dapat dipromosikan di Play Store dan App Store.
+ - Website berita responsif dan SEO-ready.
+ - CMS redaksi untuk artikel, kategori, headline, topik hangat, e-paper, langganan, pembayaran, dan
+ notifikasi.
+- Paywall premium dengan aktivasi langganan otomatis.
+ - E-paper dengan viewer halaman, mode artikel, daftar artikel, download PDF, watermark, dan signed
+ URL.
+- Dashboard analitik untuk redaksi, pelanggan, transaksi, download, dan performa artikel.
+ 
+Harga paket langganan awal
+ Paket
+Durasi
+Harga
+Akses Utama
+Premium 1 Bulan
+30 hari
+Rp49.000
+Artikel premium, e-paper harian, mode
+baca, simpan artikel.
+Premium 3 Bulan
+90 hari
+Rp129.000
+Semua fitur 1 bulan dengan harga lebih
+hemat.
+Premium 6 Bulan
+180 hari
+Rp249.000
+Akses menengah untuk pembaca rutin.
+Premium 1 Tahun
+365 hari
+Rp499.000
+Akses tahunan, arsip lebih panjang, dan
+nilai terbaik.
+2. Sasaran Produk dan Batasan Pengembangan
+2.1 Sasaran MVP
+ - Membuat aplikasi dan website yang stabil untuk membaca berita lokal dan e-paper.
+ - Menyediakan sistem langganan yang jelas dengan status aktif, expired, dan perpanjangan.
+ - Menyediakan CMS yang mudah dipakai redaksi tanpa bantuan developer untuk publikasi harian.
+ - Mengamankan konten premium agar tidak bisa diakses penuh oleh pengunjung umum.
+ - Menghasilkan data awal untuk evaluasi: artikel populer, konversi paywall, pelanggan aktif, dan
+ download e-paper.
+2.2 Fitur yang termasuk MVP
+ - Login, register, lupa password, verifikasi email, dan profil akun.
+ - Beranda, kategori, detail artikel, artikel gratis, artikel premium, dan paywall.
+ 
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 4
+- Paket langganan 1 bulan, 3 bulan, 6 bulan, 1 tahun.
+ - Pembayaran website melalui payment gateway serta kesiapan integrasi Google Play Billing dan Apple
+ In-App Purchase.
+- CMS artikel, CMS kategori, CMS e-paper, CMS pelanggan, CMS paket, CMS pembayaran, dan dashboard
+ dasar.
+- Upload PDF e-paper, generate thumbnail halaman, mode baca artikel, dan download PDF untuk
+ pelanggan.
+- SEO dasar untuk website: sitemap, canonical, meta description, Article schema, dan paywalled content
+ markup.
+- Push notification dasar untuk breaking news, berita terbaru, dan promo langganan.
+ 
+2.3 Fitur fase lanjutan
+ - Audio berita, komentar pelanggan, newsletter, referral, paket keluarga, paket institusi, rekomendasi
+ personal, arsip lama skala besar, dan gamifikasi loyalitas.
+3. Arsitektur Sistem
+Arsitektur disusun agar aplikasi mobile, website, dan CMS memakai satu sumber data yang sama
+melalui backend API. Pemisahan ini penting agar pengembangan fitur lebih rapi, mudah diuji, dan
+mudah ditingkatkan.
+Mobile App Android/iOS
+        |
+        | REST API / JSON
+        |
+Website Frontend  ---> Backend API ---> Database PostgreSQL
+        |                    |
+        |                    |-- Object Storage / CDN
+        |                    |-- Payment Gateway
+        |                    |-- Google Play Billing / Apple IAP
+        |                    |-- Push Notification
+        |                    |-- Email Service
+        |
+CMS Redaksi
+3.1 Rekomendasi stack
+ Layer
+Teknologi Rekomendasi
+Alasan
+Backend + CMS
+Laravel 11/12, PHP 8.3, Laravel
+Sanctum/Passport
+Cepat untuk CMS, banyak developer lokal, cocok untuk
+API dan dashboard.
+Database
+PostgreSQL
+Struktur kuat, relasi jelas, pencarian lebih fleksibel.
+Cache/Queue
+Redis + Laravel Horizon
+Cache homepage, rate limit, queue thumbnail e-paper,
+email, dan notifikasi.
+Website
+Next.js + TypeScript + Tailwind
+CSS
+SEO kuat, SSR, cocok untuk media digital.
+Mobile
+Flutter + Dart
+Satu codebase Android/iOS, UI konsisten, performa baik.
+Storage
+S3 compatible object storage +
+CDN
+Menyimpan gambar, PDF, thumbnail, watermark, dan
+backup.
+3.2 Prinsip arsitektur
+ - Backend API menjadi pusat validasi akses, bukan frontend.
+ - Konten premium, PDF, dan gambar asli tidak boleh disajikan dari URL publik permanen.
+ - Homepage, kategori, dan artikel populer boleh dicache, tetapi status langganan harus tetap dicek
+ real-time.
+
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 5
+- Proses berat seperti generate thumbnail PDF, watermark PDF, email, dan push notification harus masuk
+ queue.
+- CMS admin dipisah secara role permission agar wartawan, redaktur, admin e-paper, dan admin
+ langganan tidak saling mengganggu modul.
+4. Modul dan Hak Akses Pengguna
+4.1 Modul utama
+ Modul
+Fungsi
+Pengguna
+Public Reader
+Beranda, kategori, detail artikel, paywall, e-paper
+preview, pencarian.
+Guest, registered user, subscriber.
+Subscription
+Paket, checkout, status langganan, perpanjangan,
+voucher.
+User, admin langganan, admin
+keuangan.
+E-Paper
+Upload PDF, viewer, halaman, mode artikel, download,
+watermark.
+Subscriber, admin e-paper.
+CMS Redaksi
+Artikel, kategori, headline, topik hangat, preview,
+publish workflow.
+Wartawan, redaktur, pemimpin
+redaksi.
+Dashboard Bisnis
+Pelanggan, pembayaran, paket, promo, transaksi,
+laporan.
+Admin langganan, admin
+keuangan, superadmin.
+Analytics
+Traffic, artikel populer, conversion rate, download,
+retention.
+Redaksi, bisnis, superadmin.
+4.2 Role publik
+ Role
+Akses Boleh
+Akses Dibatasi
+Guest
+Beranda, judul, ringkasan, foto blur, preview
+e-paper, paket langganan.
+Full artikel premium, foto asli, download PDF,
+mode artikel penuh.
+Registered User
+Akses guest, login, preferensi, checkout,
+histori transaksi.
+Konten premium jika belum berlangganan.
+Active Subscriber
+Semua artikel premium, foto asli, e-paper,
+mode baca, download, arsip, simpan artikel.
+Batas download jika ditentukan paket.
+Expired Subscriber
+Login, histori transaksi, perpanjang
+langganan.
+Kembali terkunci untuk konten premium.
+4.3 Role CMS
+ Role
+Hak Akses
+Superadmin
+Semua modul, role permission, audit log, konfigurasi sistem, backup, payment setting.
+Pemimpin Redaksi
+Approve artikel, atur headline, pilihan redaksi, notifikasi editorial, pantau performa.
+Redaktur
+Review, edit, jadwalkan, terbitkan, arsipkan artikel.
+Wartawan
+Buat artikel, edit draft sendiri, upload gambar, kirim ke review.
+Admin E-Paper
+Upload PDF, generate halaman, input mode artikel, publikasi atau tarik edisi.
+Admin Langganan
+Pelanggan, aktivasi manual, suspend, voucher, promo, paket.
+Admin Keuangan
+Transaksi, invoice, refund, rekonsiliasi, ekspor laporan.
+Customer Service
+Bantuan akun, cek transaksi, reset password terbatas, catatan pelanggan.
+
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 6
+5. Struktur Database Siap Implementasi
+Gunakan UUID sebagai primary key untuk keamanan dan fleksibilitas integrasi. Semua tabel penting
+wajib memiliki created_at dan updated_at. Untuk data kritis seperti pembayaran, subscription, upload
+e-paper, dan perubahan artikel, simpan audit log.
+5.1 Tabel inti
+ Tabel
+Field Penting
+Catatan Implementasi
+users
+id, name, email, username, phone, password_hash, role,
+status, email_verified_at, last_login_at
+Password hash Argon2/bcrypt. Email dan
+username unique.
+categories
+id, parent_id, name, slug, sort_order, show_in_top_nav,
+show_in_sidebar, status
+Kategori bisa bertingkat dan urutannya
+diatur dari CMS.
+articles
+id, title, slug, excerpt, content, teaser_content,
+category_id, author_id, editor_id, main_image_url,
+main_image_blur_url, access_type, status, is_headline,
+is_hot_topic, published_at, seo_title, meta_description
+Full content hanya dikirim jika akses valid.
+article_revisions
+article_id, editor_id, title, content, excerpt, status, note
+Untuk rollback dan audit workflow redaksi.
+subscription_package
+s
+name, code, duration_days, price, benefits, is_popular,
+platform_product_id_android, platform_product_id_ios
+Paket harus sinkron antara web, Android,
+dan iOS.
+subscriptions
+user_id, package_id, start_date, end_date, status,
+source, auto_renew, platform_transaction_id
+Cek aktif berdasarkan status active dan
+end_date > now.
+payments
+invoice_number, amount, payment_method, platform,
+status, transaction_reference, paid_at, expired_at,
+gateway_response
+Callback harus idempotent agar tidak double
+activation.
+epaper_editions
+title, edition_date, pdf_file_path, cover_image_url,
+page_count, access_type, download_allowed, status,
+published_at
+Status processing saat generate thumbnail.
+epaper_pages
+epaper_edition_id, page_number, image_url,
+thumbnail_url, width, height, status
+Dihasilkan otomatis dari PDF.
+epaper_articles
+epaper_edition_id, page_number, title, slug, content,
+excerpt, category_id, author, image_url, access_type,
+sort_order
+Mode baca artikel dari e-paper.
+saved_items
+user_id, item_type, item_id
+Mendukung article, epaper, epaper_article.
+download_logs
+user_id, epaper_edition_id, file_url, ip_address,
+user_agent, downloaded_at
+Untuk audit dan pembatasan download.
+audit_logs
+user_id, action, module, target_type, target_id,
+old_value, new_value, ip_address, user_agent
+Semua aksi admin penting wajib tercatat.
+5.2 Seed paket langganan
+[
+  { "code": "premium_1_month", "name": "Premium 1 Bulan", "duration_days": 30,  "price": 49000 },
+  { "code": "premium_3_month", "name": "Premium 3 Bulan", "duration_days": 90,  "price": 129000 },
+  { "code": "premium_6_month", "name": "Premium 6 Bulan", "duration_days": 180, "price": 249000 },
+  { "code": "premium_1_year",  "name": "Premium 1 Tahun", "duration_days": 365, "price": 499000 }
+]
+6. API Contract dan Response Standard
+6.1 Standar response
+{
+  "success": true,
+  "message": "OK",
+  "data": {},
+  "meta": {},
+  "errors": null
+}
+
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 7
+Semua endpoint harus konsisten menggunakan format di atas agar mobile, website, dan CMS mudah
+mengonsumsi API. Gunakan HTTP status code yang benar: 200, 201, 400, 401, 403, 404, 422, 500.
+6.2 Endpoint publik
+ Method
+Endpoint
+Fungsi
+Akses
+GET
+/api/v1/home
+Data beranda: headline, topik hangat, terbaru,
+e-paper hari ini.
+Guest/subscriber
+GET
+/api/v1/articles
+List artikel dengan filter kategori, keyword, page.
+Guest/subscriber
+GET
+/api/v1/articles/{slug}
+Detail artikel dengan logic paywall.
+Guest/subscriber
+GET
+/api/v1/categories
+Daftar kategori untuk nav dan sidebar.
+Guest/subscriber
+GET
+/api/v1/epapers
+Daftar e-paper per bulan/tanggal.
+Guest/subscriber
+GET
+/api/v1/epapers/{id}
+Detail e-paper, halaman, dan daftar artikel.
+Guest/subscriber
+POST
+/api/v1/epapers/{id}/download
+Download PDF dengan signed URL dan watermark.
+Subscriber aktif
+POST
+/api/v1/saved-items
+Simpan artikel/e-paper.
+User login
+6.3 Endpoint auth dan subscription
+ Method
+Endpoint
+Fungsi
+POST
+/api/v1/auth/register
+Registrasi akun pembaca.
+POST
+/api/v1/auth/login
+Login email/username dan password.
+POST
+/api/v1/auth/refresh
+Refresh access token.
+POST
+/api/v1/auth/logout
+Logout perangkat saat ini.
+POST
+/api/v1/auth/forgot-password
+Kirim link reset password.
+GET
+/api/v1/subscription/packages
+Daftar paket langganan aktif.
+POST
+/api/v1/subscription/checkout
+Buat invoice atau checkout payment gateway.
+GET
+/api/v1/subscription/status
+Cek status paket user.
+POST
+/api/v1/payment/callback
+Callback payment gateway.
+6.4 Endpoint CMS
+ Modul
+Endpoint Utama
+Dashboard
+GET /api/v1/admin/dashboard
+Artikel
+GET/POST /api/v1/admin/articles; GET/PUT/DELETE /api/v1/admin/articles/{id}; POST
+/submit-review; POST /approve; POST /publish; POST /archive
+Kategori
+GET/POST/PUT/DELETE /api/v1/admin/categories
+E-Paper
+GET/POST /api/v1/admin/epapers; POST /upload-pdf; POST /process; POST /publish; POST
+/unpublish
+Mode Artikel E-Paper
+GET/POST /api/v1/admin/epapers/{id}/articles; PUT/DELETE
+/api/v1/admin/epaper-articles/{articleId}
+Pelanggan
+GET /api/v1/admin/customers; GET /{id}; POST /activate-subscription; POST /suspend; POST
+/reset-password
+Paket
+GET/POST/PUT/DELETE /api/v1/admin/subscription-packages
+Pembayaran
+GET /api/v1/admin/payments; GET /{id}; POST /refund; GET /export
+Notifikasi
+POST /api/v1/admin/notifications; GET /api/v1/admin/notifications
+
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 8
+7. Paywall, Subscription, dan Pembayaran
+7.1 Paywall server-side
+Paywall harus divalidasi di backend. Frontend hanya menampilkan status hasil validasi. Jangan
+mengirim full content artikel premium ke pengguna yang tidak memiliki langganan aktif, karena konten
+bisa bocor melalui inspect element atau traffic API.
+canReadArticle(user, article):
+  if article.access_type == "free": return true
+  if user is null: return false
+  return user.hasActiveSubscription()
+canReadEpaper(user, epaper):
+  if epaper.access_type == "free": return true
+  if user is null: return false
+  return user.hasActiveSubscription()
+7.2 Response artikel premium untuk guest
+{
+  "title": "Latsarmil Kopdes Didesak Dihentikan",
+  "excerpt": "Sudah makan lima korban jiwa...",
+  "content_preview": "Paragraf awal yang boleh dibaca...",
+  "content": null,
+  "image_url": null,
+  "image_blur_url": "https://cdn/blur.jpg",
+  "is_locked": true,
+  "paywall": {
+    "title": "Baca berita lengkap tanpa batas",
+    "packages": [
+      { "name": "1 bulan", "price": 49000 },
+      { "name": "3 bulan", "price": 129000 },
+      { "name": "6 bulan", "price": 249000 },
+      { "name": "1 tahun", "price": 499000 }
+    ]
+  }
+}
+7.3 Algoritma aktivasi langganan
+Payment paid
+  -> validasi signature gateway
+  -> cari invoice dan user
+  -> cek langganan aktif
+  -> jika tidak aktif: start_date = now; end_date = now + duration
+  -> jika masih aktif: start_date = current_end_date; end_date = current_end_date + duration
+  -> set subscription active
+  -> kirim email, in-app notification, push notification
+  -> redirect user ke artikel/e-paper yang sebelumnya dikunci
+7.4 Catatan Play Store dan App Store
+ - Pembelian konten digital dalam aplikasi Android harus disiapkan dengan Google Play Billing sesuai
+ aturan toko aplikasi.
+- Pembelian konten digital dalam aplikasi iOS harus disiapkan dengan Apple In-App Purchase/StoreKit.
+ - Website tetap dapat memakai payment gateway lokal, tetapi tombol dan alur pembayaran di dalam
+ aplikasi harus dikaji agar tidak ditolak saat review toko aplikasi.
+- Product ID Android dan iOS harus disimpan di tabel subscription_packages agar paket web, Android,
+ dan iOS tetap sinkron.
+
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 9
+8. E-Paper, Mode Baca, Watermark, dan Download
+8.1 Alur upload dan pemrosesan PDF
+Admin upload PDF
+  -> validasi file PDF dan ukuran
+  -> simpan PDF asli di private object storage
+  -> status epaper = processing
+  -> queue ProcessEpaperPdfJob
+  -> generate cover dan thumbnail tiap halaman
+  -> hitung page_count
+  -> admin input daftar artikel mode baca
+  -> admin publish edisi
+  -> pelanggan bisa membaca e-paper dan mode artikel
+8.2 Acuan e-paper aktual
+E-paper aktual yang digunakan sebagai acuan visual berisi 8 halaman, tanggal Senin 29 Juni 2026,
+dengan halaman utama bertajuk besar "Latsarmil Kopdes Didesak Dihentikan", rubrik Kabupaten
+Magelang pada halaman 2, Metropolis pada halaman 4, Wonosobo Ekspres pada halaman 5, Koran
+Sekolah pada halaman 6, serta Purworejo-Temanggung pada halaman 8. Struktur ini harus didukung
+oleh sistem e-paper berbasis halaman dan daftar artikel.
+8.3 Fitur viewer e-paper
+ - Swipe halaman kiri-kanan.
+ - Zoom in dan zoom out.
+ - Thumbnail per halaman.
+ - Lompat halaman menggunakan page selector.
+ - Mode landscape.
+ - Mode malam jika diperlukan.
+ - Bottom sheet daftar artikel.
+ - Tombol mode artikel.
+ - Tombol download PDF untuk pelanggan aktif.
+ - Indikator halaman, misalnya 1/8.
+ 
+8.4 Download PDF aman
+ - Hanya pelanggan aktif yang bisa download.
+ - File PDF memakai watermark dinamis berisi email user, tanggal, dan waktu download.
+ - Link download menggunakan signed URL dengan masa berlaku terbatas.
+ - Sistem mencatat download_logs untuk audit.
+ - Batas download harian dapat diterapkan, misalnya 5 kali per hari per edisi.
+ - PDF asli tidak pernah diletakkan sebagai URL publik permanen.
+ 
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 10
+9. Frontend Mobile dan Website
+9.1 Routing mobile
+/splash
+/onboarding
+/home
+/category/:slug
+/article/:slug
+/search
+/epaper
+/epaper/:id
+/epaper/:id/viewer
+/epaper/:id/articles
+/saved
+/account
+/login
+/register
+/packages
+/payment
+/payment/success
+/payment/failed
+9.2 Komponen mobile
+ Komponen
+Fungsi
+StickyHeader
+Hamburger, logo Magelang Ekspres, search, tombol masuk/avatar.
+CategoryTabs
+Navigasi horizontal swipeable.
+HeroHeadlineCard
+Gambar besar, badge headline, judul, kategori, tanggal.
+HotTopicCarousel
+Topik hangat horizontal.
+NewsListItem
+Judul kiri, thumbnail kanan, kategori, waktu, label premium.
+BlurredPremiumImage
+Gambar blur dengan icon lock untuk konten premium.
+PaywallCard
+Ajakan berlangganan dan daftar paket.
+SubscriptionPlanCard
+Pilihan paket 1 bulan, 3 bulan, 6 bulan, 1 tahun.
+EpaperGrid
+Grid cover/halaman e-paper.
+EpaperViewer
+Viewer halaman e-paper dengan zoom dan swipe.
+EpaperBottomSheet
+Daftar artikel per edisi.
+BottomNavigation
+Beranda, E-Paper, Tersimpan, Akun.
+SidebarDrawer
+Menu kategori dan halaman redaksional.
+9.3 Routing website
+/
+/kategori/[slug]
+/artikel/[slug]
+/epaper
+/epaper/[editionDate]
+/epaper/[editionDate]/halaman/[page]
+/login
+/daftar
+/paket-langganan
+/akun
+/akun/langganan
+/akun/transaksi
+/tersimpan
+/search
+9.4 SEO website
+ - Gunakan server-side rendering untuk halaman artikel.
+ 
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 11
+- Pasang meta title, meta description, canonical URL, Open Graph, dan Twitter Card.
+ - Gunakan schema NewsArticle, Article, Organization, BreadcrumbList, dan paywalled content markup.
+ - Sitemap artikel, kategori, dan e-paper dibuat otomatis.
+ - RSS/Google News feed disiapkan jika akan masuk Google News.
+ - Untuk artikel premium, sediakan judul, ringkasan, metadata, dan teaser yang cukup tanpa
+ membocorkan full content.
+10. CMS Redaksi dan Dashboard Operasional
+10.1 Dashboard utama
+Dashboard menampilkan ringkasan kinerja harian agar redaksi dan manajemen dapat membaca kondisi
+produk secara cepat.
+ - Jumlah artikel hari ini.
+ - Jumlah artikel draft, review, terbit.
+ - Artikel terpopuler.
+ - Jumlah pelanggan aktif.
+ - Jumlah pelanggan baru.
+ - Jumlah e-paper terbit.
+ - Artikel premium paling banyak dibuka.
+ - Grafik traffic.
+ - Conversion rate paywall.
+ - Download e-paper.
+ 
+10.2 Workflow artikel
+Wartawan membuat draft
+  -> kirim ke Review Editor
+  -> redaktur cek dan revisi
+  -> pemimpin redaksi/redaktur approve
+  -> jadwalkan atau terbitkan
+  -> artikel tampil di aplikasi dan website
+  -> analytics dan audit log tercatat
+10.3 Form artikel CMS
+ - Judul, slug, ringkasan, isi artikel, kategori, tag.
+ - Gambar utama, caption, alt text.
+ - Akses konten: gratis atau premium.
+ - Posisi: headline, topik hangat, terbaru, pilihan redaksi.
+ - Status: draft, review, ready, scheduled, published, archived, rejected.
+ - SEO title, meta description, canonical URL.
+ - Preview artikel sebelum terbit.
+ - Riwayat revisi dan catatan editor.
+ 
+10.4 Modul e-paper CMS
+ - Upload PDF edisi.
+ - Isi tanggal edisi dan label edisi.
+ - Generate cover dan thumbnail halaman.
+ - Tambah daftar artikel mode baca.
+ 
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 12
+- Hubungkan artikel dengan halaman PDF.
+ - Atur premium/gratis dan izin download.
+ - Publikasikan atau tarik kembali edisi.
+ - Lihat status processing, ready, failed, published.
+ 
+11. Keamanan, Logging, dan Audit Trail
+11.1 Keamanan akun
+ - Password menggunakan Argon2 atau bcrypt.
+ - Access token berumur pendek dan refresh token disimpan dalam bentuk hash.
+ - Rate limit login dan forgot password.
+ - Verifikasi email.
+ - Reset password token memiliki masa berlaku.
+ - Logout semua perangkat.
+ - Device management dan deteksi login mencurigakan.
+ 
+11.2 Keamanan konten premium
+ - Full content premium tidak dikirim ke guest.
+ - Gambar asli premium tidak dikirim ke guest.
+ - PDF e-paper asli disimpan private.
+ - Signed URL untuk gambar/halaman premium dan download.
+ - Watermark PDF dinamis.
+ - Audit log download.
+ - Validasi subscription di backend pada setiap akses.
+ - Proteksi screenshot boleh ditambahkan di mobile, tetapi tidak boleh menjadi satu-satunya pertahanan.
+ 
+11.3 Keamanan CMS
+ - Role-based access control.
+ - Permission per aksi.
+ - 2FA untuk admin.
+ - Audit log semua aksi penting.
+ - Validasi file upload PDF/gambar.
+ - Scan malware file.
+ - Backup otomatis.
+ - IP allowlist opsional untuk superadmin.
+ 
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 13
+12. Testing, Acceptance Criteria, dan Definition of
+Done
+12.1 Testing artikel premium
+ Skenario
+Ekspektasi
+Guest membuka artikel premium
+Hanya judul, ringkasan, foto blur, teaser, dan paywall tampil.
+Registered user belum berlangganan
+membuka artikel premium
+Sama seperti guest, tetapi tombol checkout lebih dominan.
+Subscriber aktif membuka artikel
+premium
+Full content dan foto asli tampil.
+Subscriber expired membuka artikel
+premium
+Konten terkunci dan muncul ajakan perpanjang.
+Inspect API guest
+Full content dan URL gambar asli tidak ada di response.
+12.2 Testing e-paper
+ Skenario
+Ekspektasi
+Guest membuka e-paper
+Hanya preview cover/thumbnail terbatas dan paywall.
+Guest klik download
+Ditolak dan diarahkan ke paket langganan.
+Subscriber membuka viewer
+Halaman e-paper, zoom, swipe, dan daftar artikel berjalan.
+Subscriber download PDF
+PDF ter-watermark dan download log tersimpan.
+Signed URL kadaluarsa
+File tidak bisa dibuka setelah expired.
+Admin upload PDF besar/rusak
+Validasi jelas dan status failed jika proses gagal.
+12.3 Definition of Done
+ - API berjalan dan terdokumentasi.
+ - UI mobile/website terhubung dengan API.
+ - Validasi form lengkap.
+ - Loading, empty state, dan error state tersedia.
+ - Role permission benar.
+ - Audit log tercatat untuk aksi penting.
+ - Unit test minimal untuk service utama.
+ - Manual QA lulus.
+ - Tidak ada konten premium bocor ke guest.
+ - Dokumentasi endpoint dan cara deploy tersedia.
+ 
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 14
+13. Sprint Plan dan Backlog Developer
+13.1 Sprint plan
+ Sprint
+Durasi
+Output Utama
+Sprint 1 - Fondasi Backend
+2 minggu
+Setup backend, auth, role permission, migration, user management,
+kategori.
+Sprint 2 - Artikel dan CMS
+2 minggu
+CRUD artikel, upload gambar, kategori, status artikel, headline, topik
+hangat, API publik.
+Sprint 3 - Paywall dan
+Subscription
+2 minggu
+Paket, subscription engine, checkout, callback, paywall API, status
+langganan.
+Sprint 4 - E-Paper
+3 minggu
+Upload PDF, generate thumbnail, viewer API, mode artikel, download,
+watermark, signed URL.
+Sprint 5 - Mobile App
+4 minggu
+Home, kategori, detail artikel, paywall, login, paket, e-paper, akun,
+tersimpan.
+Sprint 6 - Website
+3 minggu
+Homepage, kategori, artikel, paywall website, e-paper website, SEO,
+sitemap.
+Sprint 7 - Dashboard dan
+Analytics
+2 minggu
+Traffic, artikel populer, subscriber stats, download stats, conversion
+rate.
+Sprint 8 - QA, Security,
+Release
+2-3 minggu
+Bug fixing, security testing, load testing, app store readiness, soft
+launch.
+13.2 Backlog teknis prioritas
+ Kode
+Backlog
+Prioritas
+PIC
+BE-01
+Setup project backend, auth, role, permission, audit log.
+P0
+Backend
+BE-02
+Database migration semua tabel inti.
+P0
+Backend
+BE-03
+API home, artikel, kategori, search.
+P0
+Backend
+BE-04
+Paywall service dan subscription checker.
+P0
+Backend
+BE-05
+Payment checkout dan callback idempotent.
+P0
+Backend
+BE-06
+E-paper upload, processing queue, thumbnail generator.
+P0
+Backend
+BE-07
+Watermark PDF dan signed URL download.
+P0
+Backend
+CMS-01
+Dashboard CMS dan sidebar role-based.
+P0
+Frontend CMS
+CMS-02
+Editor artikel dan workflow review-publish.
+P0
+Frontend CMS
+CMS-03
+E-paper upload dan mode artikel.
+P0
+Frontend CMS
+APP-01
+Splash, onboarding, home, kategori, detail artikel.
+P0
+Mobile
+APP-02
+Paywall, login, register, paket langganan.
+P0
+Mobile
+APP-03
+E-paper grid, viewer, bottom sheet daftar artikel.
+P0
+Mobile
+WEB-01
+Homepage, kategori, detail artikel, paywall.
+P0
+Web
+WEB-02
+E-paper website dan SEO structured data.
+P0
+Web
+QA-01
+Test case premium, subscription, e-paper, download, security.
+P0
+QA
+14. Catatan Implementasi agar Hasil Presisi
+1. Jangan membangun e-paper hanya sebagai PDF viewer. Sistem harus mendukung halaman,
+thumbnail, mode artikel, daftar artikel, dan download aman.
+2. Jangan membuat paywall hanya di frontend. Full content premium tidak boleh dikirim dari API untuk
+pengguna yang belum aktif.
+
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 15
+3. Jangan melewati CMS workflow. Redaksi membutuhkan status draft, review, siap terbit, terjadwal,
+terbit, arsip, dan revisi.
+4. Jangan menyamakan semua pengguna. Guest, registered user, active subscriber, expired subscriber,
+admin, dan superadmin harus punya pengalaman serta hak akses berbeda.
+5. Jangan menunda audit log. Perubahan harga paket, aktivasi manual, refund, upload/hapus e-paper,
+dan publish artikel harus tercatat sejak MVP.
+
+
+Blueprint Teknis Koran Digital Magelang Ekspres
+Halaman 16
+Lampiran A - Ringkasan Acuan Visual
+Halaman-halaman lampiran berikut menampilkan mockup UI/UX yang menjadi panduan visual untuk
+pengembangan. Tim IT perlu menerjemahkan mockup tersebut menjadi komponen reusable di mobile,
+website, dan CMS. Gambar disajikan dalam halaman landscape agar detail lebih mudah dibaca.
+
+
+Lampiran B - Beranda dan Navigasi Utama
+Blueprint Teknis Koran Digital Magelang Ekspres
+
+
+Lampiran C - Sistem Premium, Login, dan Langganan
+Blueprint Teknis Koran Digital Magelang Ekspres
+
+
+Lampiran D - Fitur E-Paper dan Mode Baca Berdasarkan Edisi Aktual
+Blueprint Teknis Koran Digital Magelang Ekspres
+
+
+Lampiran E - Dashboard CMS Redaksi dan Manajemen Langganan
+Blueprint Teknis Koran Digital Magelang Ekspres
+
+
+Lampiran F - Acuan E-Paper Aktual Halaman 1
+Blueprint Teknis Koran Digital Magelang Ekspres

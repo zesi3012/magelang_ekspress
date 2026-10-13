@@ -1,0 +1,202 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Magelang Ekspres Web",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"run",
+				"-d",
+				"web-server",
+				"--web-hostname",
+				"127.0.0.1",
+				"--web-port",
+				"8080"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Ekspres API",
+			"type": "shell",
+			"command": "dart",
+			"args": [
+				"run",
+				"backend/server.dart"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Flutter Analyze",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"analyze"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Flutter Tests",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"test"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Flutter Analyze",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"analyze"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Flutter Analyze",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"analyze"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Flutter Analyze",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"analyze"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Flutter Analyze",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"analyze"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Flutter Analyze",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"analyze"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Flutter Analyze",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"analyze"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Ekspres API",
+			"type": "shell",
+			"command": "dart",
+			"args": [
+				"run",
+				"backend/server.dart"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Ekspres API",
+			"type": "shell",
+			"command": "dart",
+			"args": [
+				"run",
+				"backend/server.dart"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Ekspres API",
+			"type": "shell",
+			"command": "dart",
+			"args": [
+				"run",
+				"backend/server.dart"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Ekspres Web Fresh",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"run",
+				"-d",
+				"web-server",
+				"--web-hostname",
+				"127.0.0.1",
+				"--web-port",
+				"8080"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Ekspres Web Release Build",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"build",
+				"web",
+				"--release",
+				"--base-href",
+				"/magelang_express/build/web/"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Ekspres API Restart",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$listener = Get-NetTCPConnection -LocalPort 8787 -State Listen -ErrorAction SilentlyContinue | Select-Object -First 1; if ($listener) { $process = Get-CimInstance Win32_Process -Filter \"ProcessId = $($listener.OwningProcess)\"; if ($process.CommandLine -notmatch 'backend[\\\\/]server\\.dart') { throw \"Port 8787 belongs to another process; it was not stopped.\" }; Stop-Process -Id $listener.OwningProcess -Force }; Start-Process -FilePath 'dart' -ArgumentList 'run backend/server.dart' -WorkingDirectory 'C:\\xampp\\htdocs\\magelang_express' -WindowStyle Hidden; 'Backend restart requested.'"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Magelang Ekspres Flutter Preview",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"run",
+				"-d",
+				"web-server",
+				"--web-hostname",
+				"127.0.0.1",
+				"--web-port",
+				"8081"
+			],
+			"isBackground": true
+		}
+	]
+}

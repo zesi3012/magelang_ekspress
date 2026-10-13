@@ -1,0 +1,16 @@
+USE magelang_express;
+
+ALTER TABLE articles
+  ADD COLUMN IF NOT EXISTS main_image_url TEXT NULL,
+  ADD COLUMN IF NOT EXISTS main_image_blur_url TEXT NULL,
+  ADD COLUMN IF NOT EXISTS main_image_alt_text VARCHAR(180) NULL;
+
+ALTER TABLE epapers
+  ADD COLUMN IF NOT EXISTS private_file_name VARCHAR(255) NULL;
+
+CREATE TABLE IF NOT EXISTS app_settings (
+  id TINYINT UNSIGNED PRIMARY KEY,
+  settings JSON NOT NULL,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  CONSTRAINT chk_app_settings_singleton CHECK (id = 1)
+) ENGINE=InnoDB;
