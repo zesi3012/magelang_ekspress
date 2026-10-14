@@ -32,16 +32,55 @@ class MagelangHeader extends StatelessWidget {
             return Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                // ===== TOMBOL MENU =====
                 IconButton(
                   icon: const Icon(Icons.menu_rounded),
                   color: const Color(0xff272521),
                   tooltip: 'Menu',
                   onPressed: onMenu,
                 ),
+
+                // ===== LOGO "ME" (kotak gradient biru) =====
+                Container(
+                  width: 36,
+                  height: 36,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Color(0xff2563eb),
+                        Color(0xff7c3aed),
+                      ],
+                    ),
+                    borderRadius: BorderRadius.circular(8),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color(0xff2563eb).withOpacity(0.3),
+                        blurRadius: 6,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'ME',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: -0.5,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(width: 10),
+
+                // ===== BRAND NAME + TAGLINE =====
                 Expanded(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'MAGELANG EKSPRES',
@@ -49,35 +88,28 @@ class MagelangHeader extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           color: AppColors.red,
-                          fontSize: narrow ? 8 : 9,
+                          fontSize: narrow ? 12 : 14,
                           fontWeight: FontWeight.w900,
+                          letterSpacing: 0.3,
                         ),
                       ),
-                      Text(
-                        'KORAN DIGITAL',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: const Color(0xff202020),
-                          fontFamily: 'Georgia',
-                          fontSize: narrow ? 17 : 21,
-                          height: 1.05,
-                          fontWeight: FontWeight.w900,
-                        ),
-                      ),
+                      const SizedBox(height: 1),
                       Text(
                         tagline,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                           color: Color(0xff77736d),
-                          fontSize: 8,
+                          fontSize: 10,
                           height: 1.1,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ],
                   ),
                 ),
+
+                // ===== TOMBOL PENCARIAN =====
                 IconButton(
                   constraints: const BoxConstraints.tightFor(
                     width: 40,
@@ -89,6 +121,8 @@ class MagelangHeader extends StatelessWidget {
                   tooltip: 'Cari',
                   onPressed: onSearch,
                 ),
+
+                // ===== TOMBOL LOGIN =====
                 if (narrow)
                   IconButton(
                     constraints: const BoxConstraints.tightFor(

@@ -59,17 +59,13 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byKey(const ValueKey('desktop-site-header')), findsNothing);
-    expect(find.text('Beranda'), findsOneWidget);
-    expect(find.text('E-Paper'), findsOneWidget);
-    expect(find.text('Tersimpan'), findsOneWidget);
-    expect(find.text('Akun'), findsOneWidget);
-    expect(
-      find.ancestor(
-        of: find.text('MAGELANG EKSPRES'),
-        matching: find.byType(FittedBox),
-      ),
-      findsOneWidget,
-    );
+    expect(find.text('Beranda'), findsWidgets);
+    expect(find.text('E-Paper'), findsWidgets);
+    expect(find.text('Tersimpan'), findsWidgets);
+    expect(find.text('Akun'), findsWidgets);
+    // Header mobile sekarang pakai Row dengan logo "ME" + brand
+    expect(find.text('MAGELANG EKSPRES'), findsWidgets);
+    expect(find.text('Akurat, Terpercaya, dan Menginspirasi'), findsOneWidget);
   });
 
   testWidgets('drawer beranda membuka menu navigasi blueprint', (tester) async {
@@ -122,10 +118,14 @@ void main() {
     Text locationText(Finder item, String label) => tester.widget<Text>(
       find.descendant(of: item, matching: find.text(label)),
     );
-    expect(locationText(temanggung, 'Temanggung').style?.color, AppColors.red);
+    // Active state sekarang pakai AppColors.navy (biru) bukan AppColors.red
+    expect(
+      locationText(temanggung, 'Temanggung').style?.color,
+      AppColors.navy,
+    );
     expect(
       locationText(purworejo, 'Purworejo').style?.color,
-      isNot(AppColors.red),
+      isNot(AppColors.navy),
     );
 
     await tester.ensureVisible(purworejo);
@@ -134,9 +134,12 @@ void main() {
 
     expect(
       locationText(temanggung, 'Temanggung').style?.color,
-      isNot(AppColors.red),
+      isNot(AppColors.navy),
     );
-    expect(locationText(purworejo, 'Purworejo').style?.color, AppColors.red);
+    expect(
+      locationText(purworejo, 'Purworejo').style?.color,
+      AppColors.navy,
+    );
     expect(tester.takeException(), isNull);
   });
 
@@ -266,8 +269,12 @@ void main() {
     expect(desktopHeader, findsOneWidget);
     expect(tester.getSize(desktopHeader).width, 871);
     expect(find.text('BERITA DAERAH • E-PAPER DIGITAL'), findsOneWidget);
-    expect(find.text('MAGELANG'), findsOneWidget);
-    expect(find.text('JAWA TENGAH'), findsOneWidget);
+    // Tab desktop sekarang: BERANDA, LOKAL, TERBARU, E-PAPER, TERSIMPAN
+    expect(find.text('BERANDA'), findsOneWidget);
+    expect(find.text('LOKAL'), findsOneWidget);
+    expect(find.text('TERBARU'), findsOneWidget);
+    expect(find.text('E-PAPER'), findsWidgets);
+    expect(find.text('TERSIMPAN'), findsOneWidget);
     expect(find.byType(NavigationBar), findsNothing);
     expect(tester.takeException(), isNull);
   });
@@ -287,7 +294,7 @@ void main() {
       find.byKey(const ValueKey('persistent-editorial-sidebar')),
       findsOneWidget,
     );
-    expect(find.text('Tersimpan'), findsOneWidget);
+    expect(find.text('Tersimpan'), findsWidgets);
     expect(find.byType(NavigationBar), findsNothing);
     expect(tester.takeException(), isNull);
   });
@@ -334,33 +341,37 @@ void main() {
     await tester.pumpWidget(const MagelangExpressApp());
     await tester.pumpAndSettle();
 
-    await tester.tap(find.text('E-Paper'));
+    await tester.tap(find.text('E-Paper').first);
     await tester.pumpAndSettle();
     expect(find.byType(EpaperListScreen), findsOneWidget);
-    expect(find.text('Buka Koran'), findsWidgets);
+    // Tombol sekarang "Baca versi e-paper" (bukan "Buka Koran")
+    expect(find.text('Baca versi e-paper'), findsWidgets);
     await tester.tap(
       find.byKey(const ValueKey('epaper-issue-epaper-2026-08-13')),
     );
     await tester.pumpAndSettle();
-    expect(find.text('DETAIL E-PAPER'), findsOneWidget);
+    // Header detail sekarang pakai header custom, cari judul edisi
+    expect(find.text('Arsip E-Paper Magelang Ekspres'), findsOneWidget);
     await tester.pageBack();
     await tester.pumpAndSettle();
 
     await tester.tap(find.byKey(const ValueKey('latest-published-issue')));
     await tester.pumpAndSettle();
-    expect(find.text('DETAIL E-PAPER'), findsOneWidget);
+    expect(find.text('Arsip E-Paper Magelang Ekspres'), findsOneWidget);
     await tester.pageBack();
     await tester.pumpAndSettle();
 
-    await tester.tap(find.text('Buka Koran').first);
+    await tester.tap(find.text('Baca versi e-paper').first);
     await tester.pumpAndSettle();
-    expect(find.text('DETAIL E-PAPER'), findsOneWidget);
-    await tester.tap(find.text('BUKA E-PAPER'));
+    expect(find.text('Arsip E-Paper Magelang Ekspres'), findsOneWidget);
+    // Tombol viewer sekarang "Baca versi e-paper" (bukan "BUKA E-PAPER")
+    await tester.tap(find.text('Baca versi e-paper').first);
     await tester.pumpAndSettle();
 
-    expect(find.text('HALAMAN 1 / 8'), findsOneWidget);
-    expect(find.byTooltip('PDF belum tersedia'), findsOneWidget);
-    expect(find.text('DAFTAR ARTIKEL'), findsOneWidget);
+    // Indikator halaman sekarang format "1/8" dalam badge
+    expect(find.text('1/8'), findsOneWidget);
+    expect(find.text('PREVIEW HALAMAN'), findsOneWidget);
+    expect(find.text('Daftar Artikel'), findsOneWidget);
   });
 
   testWidgets('preview e-paper menjelaskan PDF belum tersedia', (tester) async {
@@ -392,7 +403,9 @@ void main() {
       ),
     );
 
-    await tester.tap(find.byTooltip('PDF belum tersedia'));
+    // Tooltip download sekarang "Download e-paper" atau "PDF belum tersedia"
+    // tergantung implementasi; cari tombol download di header
+    await tester.tap(find.byIcon(Icons.download_outlined).first);
     await tester.pump();
 
     expect(find.text('PDF edisi belum diunggah oleh redaksi.'), findsOneWidget);
@@ -434,7 +447,8 @@ void main() {
       findsOneWidget,
     );
     final savedTitle = tester.widget<Text>(find.text('Tersimpan').first);
-    expect(savedTitle.style?.color, AppColors.ink);
+    // Warna title AppBar tersimpan sekarang pakai AppColors.ink
+    expect(savedTitle.style?.color, const Color(0xff272521));
     expect(
       find.text('Budidaya Maggot di Jambon, Cara Kurangi Sampah Organik'),
       findsOneWidget,

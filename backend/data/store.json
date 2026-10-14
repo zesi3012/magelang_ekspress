@@ -2182,6 +2182,18 @@
     {
       "date": "2026-10-14",
       "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription/packages"
     }
   ],
   "notifications": [

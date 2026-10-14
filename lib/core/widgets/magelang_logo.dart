@@ -18,40 +18,25 @@ class MagelangLogo extends StatelessWidget {
   final double? height;
 
   @override
-  Widget build(BuildContext context) =>
-      ValueListenableBuilder<AppContentSettings>(
+  Widget build(BuildContext context) => ValueListenableBuilder<AppContentSettings>(
         valueListenable: appContentSettings,
-        builder: (context, settings, _) => _build(context, settings),
+        builder: (context, settings, _) => _buildLogo(context, settings),
       );
 
-  Widget _build(BuildContext context, AppContentSettings settings) {
+  Widget _buildLogo(BuildContext context, AppContentSettings settings) {
     final url = settings.logoUrl.trim();
+    final boxSize = width ?? (compact ? 36.0 : 64.0);
     final imageWidth = width ?? (compact ? 142.0 : 260.0);
     final imageHeight = height ?? (compact ? 48.0 : 112.0);
-    Widget fallback() => Image.asset(
-      'docx_pdf/logo.jpeg',
-      width: imageWidth,
-      height: imageHeight,
-      fit: BoxFit.contain,
-      semanticLabel: settings.brandName,
-    );
+
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (url.isEmpty)
-          fallback()
-        else
-          Image.network(
-            url,
-            width: imageWidth,
-            height: imageHeight,
-            fit: BoxFit.contain,
-            errorBuilder: (_, _, _) => fallback(),
-          ),
+        if (url.isEmpty) _buildMEBox(boxSize) else _buildImageLogo(url, imageWidth, imageHeight, settings),
         if (settings.tagline.isNotEmpty)
           Padding(
-            padding: const EdgeInsets.only(left: 4, top: 1),
+            padding: EdgeInsets.only(left: 4, top: compact ? 1 : 4),
             child: Text(
               settings.tagline,
               maxLines: 1,
@@ -67,4 +52,50 @@ class MagelangLogo extends StatelessWidget {
       ],
     );
   }
+
+  Widget _buildMEBox(double size) => Container(
+        width: size,
+        height: size,
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [Color(0xff2563eb), Color(0xff7c3aed)],
+          ),
+          borderRadius: BorderRadius.circular(compact ? 8.0 : 16.0),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xff2563eb).withOpacity(0.3),
+              blurRadius: compact ? 6 : 12,
+              offset: Offset(0, compact ? 2 : 4),
+            ),
+          ],
+        ),
+        alignment: Alignment.center,
+        child: Text(
+          'ME',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: compact ? 14 : 28,
+            fontWeight: FontWeight.w900,
+            letterSpacing: compact ? -0.5 : -1,
+          ),
+        ),
+      );
+
+  Widget _buildImageLogo(String url, double w, double h, AppContentSettings settings) =>
+      Image.network(
+        url,
+        width: w,
+        height: h,
+        fit: BoxFit.contain,
+        semanticLabel: settings.brandName,
+        errorBuilder: (_, _, _) => Image.asset(
+          'docx_pdf/logo.jpeg',
+          width: w,
+          height: h,
+          fit: BoxFit.contain,
+          semanticLabel: settings.brandName,
+        ),
+      );
 }
