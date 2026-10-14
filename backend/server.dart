@@ -905,11 +905,30 @@ Future<void> _handle(
         }
         adminLoginChallenges.remove(token);
       } else {
-        final expectedCode = Platform.environment['ADMIN_2FA_CODE']!;
-        if (!_constantTimeEquals(code, expectedCode)) {
+        final challenge = adminLoginChallenges[token];
+        if (challenge == null || !challenge.expiresAt.isAfter(now)) {
           sessions.remove(token);
-          return _send(request, 401, {'error': 'Kode verifikasi tidak valid.'});
+          adminLoginChallenges.remove(token);
+          return _send(request, 401, {
+            'error': 'Kode verifikasi tidak valid atau sudah kedaluwarsa.',
+          });
         }
+        if (!_constantTimeEquals(
+          _adminVerificationCodeHash(code),
+          challenge.codeHash,
+        )) {
+          challenge.attempts++;
+          if (challenge.attempts >= _maxAdminOtpAttempts) {
+            sessions.remove(token);
+            adminLoginChallenges.remove(token);
+          }
+          return _send(request, 401, {
+            'error': challenge.attempts >= _maxAdminOtpAttempts
+                ? 'Batas percobaan tercapai. Silakan masuk kembali.'
+                : 'Kode verifikasi tidak valid.',
+          });
+        }
+        adminLoginChallenges.remove(token);
       }
       final accessToken = _randomToken();
       final accessSession = Session(
@@ -2315,7 +2334,9 @@ Future<void> _handle(
       if (article == null) {
         return _send(request, 404, {'error': 'Artikel tidak ditemukan.'});
       }
-      if (article['status'] != 'review') {
+      // Super Admin bisa approve dari draft/review/ready
+      final isSuperAdmin = session!.role == 'Super Admin';
+      if (article['status'] != 'review' && !isSuperAdmin) {
         return _send(request, 409, {
           'error': 'Hanya artikel berstatus review yang dapat disetujui.',
         });
@@ -2480,7 +2501,10 @@ Future<void> _handle(
       if (article['status'] == 'published') {
         return _send(request, 200, article);
       }
-      if (!{'ready', 'scheduled'}.contains(article['status'])) {
+      // Super Admin bisa langsung publish dari draft/review/ready
+      final isSuperAdmin = session!.role == 'Super Admin';
+      if (!isSuperAdmin &&
+          !{'ready', 'scheduled'}.contains(article['status'])) {
         return _send(request, 409, {
           'error': 'Setujui artikel sebelum menerbitkannya.',
         });
@@ -3178,6 +3202,21 @@ String _adminVerificationCodeHash(String code) => crypto.Hmac(
 ).convert(utf8.encode(code)).toString();
 
 _SmtpConfiguration? _smtpConfiguration() {
+  // ===== PATCH DEVELOPMENT =====
+  final appEnv =
+      Platform.environment['APP_ENV']?.trim().toLowerCase() ?? 'development';
+  if (appEnv != 'production') {
+    return _SmtpConfiguration(
+      host: 'localhost',
+      port: 25,
+      username: 'dev@localhost',
+      password: 'dev',
+      sender: 'dev@localhost',
+      senderName: 'Development',
+    );
+  }
+  // ===== END PATCH =====
+
   final username = Platform.environment['SMTP_USERNAME']?.trim() ?? '';
   final password = Platform.environment['SMTP_APP_PASSWORD']?.trim() ?? '';
   final host = Platform.environment['SMTP_HOST']?.trim() ?? 'smtp.gmail.com';
@@ -3212,6 +3251,23 @@ Future<void> _sendAdminVerificationEmail(
   String recipient,
   String code,
 ) async {
+  // ===== PATCH DEVELOPMENT =====
+  final appEnv =
+      Platform.environment['APP_ENV']?.trim().toLowerCase() ?? 'development';
+  if (appEnv != 'production') {
+    stdout.writeln('');
+    stdout.writeln('╔══════════════════════════════════════════╗');
+    stdout.writeln('║       OTP LOGIN ADMIN (DEVELOPMENT)      ║');
+    stdout.writeln('╠══════════════════════════════════════════╣');
+    stdout.writeln('║ Email : $recipient');
+    stdout.writeln('║ OTP   : $code');
+    stdout.writeln('║ Berlaku 5 menit, sekali pakai.');
+    stdout.writeln('╚══════════════════════════════════════════╝');
+    stdout.writeln('');
+    return;
+  }
+  // ===== END PATCH =====
+
   final message = Message()
     ..from = Address(configuration.sender, configuration.senderName)
     ..recipients.add(recipient)

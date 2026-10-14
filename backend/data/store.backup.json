@@ -1,0 +1,1904 @@
+{
+  "articles": [
+    {
+      "id": "kampung-inovatif-2026-08-13",
+      "slug": "budidaya-maggot-jambon-kampung-inovatif",
+      "title": "Budidaya Maggot di Jambon, Cara Kurangi Sampah Organik",
+      "category": "KAMPUNG INOVATIF",
+      "excerpt": "Edisi 13 Agustus 2026, halaman 6. Baca ringkasan dua baris; scan koran dan isi lengkap tersedia untuk pelanggan.",
+      "body": "Sorotan Kampung Inovatif dari edisi 13 Agustus 2026. Buka halaman 6 untuk membaca versi koran lengkap.",
+      "isPremium": true,
+      "status": "published",
+      "author": "system",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "isSample": true,
+      "epaperId": "epaper-2026-08-13",
+      "pageNumber": 6,
+      "socialLinks": {}
+    },
+    {
+      "id": "kampung-inovatif-meteseh-2026-08-13",
+      "slug": "kampung-meteseh-hut-ri-2026",
+      "title": "Kampung Meteseh Semarakkan HUT RI dengan Beragam Lomba",
+      "category": "KAMPUNG INOVATIF",
+      "excerpt": "Edisi 13 Agustus 2026, halaman 6. Cuplikan gratis dua baris; scan halaman penuh terkunci untuk pelanggan.",
+      "body": "Berita Kampung Inovatif dari halaman 6 edisi 13 Agustus 2026. Buka scan halaman untuk versi cetak lengkap.",
+      "isPremium": true,
+      "status": "published",
+      "author": "system",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "isSample": true,
+      "epaperId": "epaper-2026-08-13",
+      "pageNumber": 6,
+      "socialLinks": {}
+    }
+  ],
+  "epapers": [
+    {
+      "id": "epaper-2026-08-13",
+      "title": "MAGELANG EKSPRES",
+      "edition": "Edisi 13 Agustus 2026",
+      "date": "13 Agustus 2026",
+      "totalPages": 8,
+      "status": "published",
+      "featured": true,
+      "isSample": true,
+      "coverImage": "/media/media-epaper-2026-08-13-p01.jpg",
+      "privateFileName": "sample-2026-08-13.pdf",
+      "downloadAllowed": false,
+      "pages": [
+        {
+          "pageNumber": 1,
+          "label": "PURWOREJO - TEMANGGUNG",
+          "accentColor": 4290060074,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 2,
+          "label": "KABUPATEN MAGELANG",
+          "accentColor": 4290060074,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 3,
+          "label": "MAGELANG",
+          "accentColor": 4290060074,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 4,
+          "label": "METROPOLIS",
+          "accentColor": 4290060074,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 5,
+          "label": "WONOSOBO EKSPRES",
+          "accentColor": 4290060074,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 6,
+          "label": "KAMPUNG INOVATIF",
+          "accentColor": 4283145030,
+          "articleIds": [
+            "kampung-inovatif-2026-08-13",
+            "kampung-inovatif-meteseh-2026-08-13"
+          ]
+        },
+        {
+          "pageNumber": 7,
+          "label": "WONOSOBO / PURWOREJO",
+          "accentColor": 4290060074,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 8,
+          "label": "MAGELANG / METROPOLIS",
+          "accentColor": 4290060074,
+          "articleIds": []
+        }
+      ],
+      "articles": [
+        {
+          "id": "kampung-inovatif-2026-08-13",
+          "title": "Budidaya Maggot di Jambon, Cara Kurangi Sampah Organik",
+          "category": "KAMPUNG INOVATIF",
+          "pageNumber": 6,
+          "isPremium": true,
+          "excerpt": "Edisi 13 Agustus 2026, halaman 6. Baca scan lengkap dengan langganan.",
+          "content": "Sorotan Kampung Inovatif dari halaman 6. Scan halaman koran memuat artikel lengkap.",
+          "socialLinks": {}
+        },
+        {
+          "id": "kampung-inovatif-meteseh-2026-08-13",
+          "title": "Kampung Meteseh Semarakkan HUT RI dengan Beragam Lomba",
+          "category": "KAMPUNG INOVATIF",
+          "pageNumber": 6,
+          "isPremium": true,
+          "excerpt": "Kampung Meteseh mengisi peringatan HUT RI dengan beragam lomba.",
+          "content": "Berita Kampung Inovatif pada halaman 6 edisi 13 Agustus 2026. Scan halaman koran memuat artikel lengkap.",
+          "socialLinks": {}
+        }
+      ]
+    },
+    {
+      "id": "epaper-2026-10-01",
+      "title": "MAGELANG EKSPRES",
+      "edition": "Edisi 1 Oktober 2026",
+      "date": "1 Oktober 2026",
+      "totalPages": 8,
+      "status": "published",
+      "featured": false,
+      "isSample": true,
+      "coverImage": "/media/media-epaper-2026-10-01-p01.jpg",
+      "privateFileName": "sample-2026-10-01.pdf",
+      "downloadAllowed": false,
+      "pages": [
+        {
+          "pageNumber": 1,
+          "label": "BERITA UTAMA",
+          "accentColor": 4290060074,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 2,
+          "label": "KABUPATEN MAGELANG",
+          "accentColor": 4290060074,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 3,
+          "label": "WONOSOBO EKSPRES",
+          "accentColor": 4290060074,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 4,
+          "label": "METROPOLIS",
+          "accentColor": 4290060074,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 5,
+          "label": "MAGELANG",
+          "accentColor": 4290060074,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 6,
+          "label": "WONOSOBO",
+          "accentColor": 4283145030,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 7,
+          "label": "KABUPATEN MAGELANG",
+          "accentColor": 4290060074,
+          "articleIds": []
+        },
+        {
+          "pageNumber": 8,
+          "label": "MAGELANG / METROPOLIS",
+          "accentColor": 4290060074,
+          "articleIds": []
+        }
+      ],
+      "articles": []
+    }
+  ],
+  "subscriptionPlans": [
+    {
+      "id": "premium_1_month",
+      "name": "Premium 1 Bulan",
+      "durationDays": 30,
+      "price": 49000,
+      "benefits": [
+        "Artikel premium",
+        "E-paper",
+        "Baca nanti"
+      ]
+    },
+    {
+      "id": "premium_3_month",
+      "name": "Premium 3 Bulan",
+      "durationDays": 90,
+      "price": 129000,
+      "benefits": [
+        "Artikel premium",
+        "E-paper",
+        "Baca nanti"
+      ]
+    },
+    {
+      "id": "premium_6_month",
+      "name": "Premium 6 Bulan",
+      "durationDays": 180,
+      "price": 249000,
+      "benefits": [
+        "Artikel premium",
+        "E-paper",
+        "Baca nanti"
+      ]
+    },
+    {
+      "id": "premium_1_year",
+      "name": "Premium 1 Tahun",
+      "durationDays": 365,
+      "price": 499000,
+      "benefits": [
+        "Artikel premium",
+        "E-paper",
+        "Baca nanti"
+      ]
+    }
+  ],
+  "savedItems": [],
+  "auditLog": [
+    {
+      "action": "admin.registered",
+      "resourceId": "author.lokal@magelangekspres.local",
+      "actor": "pemilik@magelangekspres.local",
+      "at": "2026-10-08T03:48:19.247058Z"
+    },
+    {
+      "action": "admin.registered",
+      "resourceId": "editor.lokal@magelangekspres.local",
+      "actor": "pemilik@magelangekspres.local",
+      "at": "2026-10-08T03:48:12.227257Z"
+    },
+    {
+      "action": "epaper.deleted",
+      "resourceId": "edisi-2026-09-06",
+      "actor": "pemilik@magelangekspres.local",
+      "at": "2026-10-08T01:43:36.559652Z"
+    },
+    {
+      "action": "article.deleted",
+      "resourceId": "article-1788838433073",
+      "actor": "pemilik@magelangekspres.local",
+      "at": "2026-10-08T01:43:36.388912Z"
+    },
+    {
+      "action": "article.deleted",
+      "resourceId": "article-1788704071746",
+      "actor": "pemilik@magelangekspres.local",
+      "at": "2026-10-08T01:43:36.188255Z"
+    },
+    {
+      "action": "article.deleted",
+      "resourceId": "koran-sekolah-sample",
+      "actor": "pemilik@magelangekspres.local",
+      "at": "2026-10-08T01:43:36.096192Z"
+    },
+    {
+      "action": "article.deleted",
+      "resourceId": "welcome",
+      "actor": "pemilik@magelangekspres.local",
+      "at": "2026-10-08T01:43:35.693332Z"
+    },
+    {
+      "action": "admin.registered",
+      "resourceId": "author5913@magelangekspres.local",
+      "actor": "pemilik@magelangekspres.local",
+      "at": "2026-10-07T17:59:59.807338Z"
+    },
+    {
+      "action": "admin.registered",
+      "resourceId": "editor5913@magelangekspres.local",
+      "actor": "pemilik@magelangekspres.local",
+      "at": "2026-10-07T17:58:49.210939Z"
+    },
+    {
+      "action": "admin.registered",
+      "resourceId": "workflow-author@example.test",
+      "actor": "pemilik@magelangekspres.local",
+      "at": "2026-10-07T15:46:53.048546Z"
+    },
+    {
+      "action": "admin.registered",
+      "resourceId": "cantigi22@gmail.com",
+      "actor": "system",
+      "at": "2026-10-04T02:45:52.634171Z"
+    },
+    {
+      "action": "admin.registered",
+      "resourceId": "zesiwalikhsani93@gmail.com",
+      "actor": "system",
+      "at": "2026-10-04T02:37:57.187848Z"
+    },
+    {
+      "action": "admin.registered",
+      "resourceId": "admin@gmail.com",
+      "actor": "system",
+      "at": "2026-10-03T11:54:56.084716Z"
+    },
+    {
+      "action": "admin.registered",
+      "resourceId": "author.test@example.com",
+      "actor": "system",
+      "at": "2026-10-03T11:11:20.169717Z"
+    },
+    {
+      "action": "subscription.price_updated",
+      "resourceId": "premium_1_month",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-10-01T08:41:57.634479Z"
+    },
+    {
+      "action": "category.deleted",
+      "resourceId": "rumor",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-10-01T08:37:14.825557Z"
+    },
+    {
+      "action": "article.updated",
+      "resourceId": "article-1788838433073",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-10-01T04:07:10.318586Z"
+    },
+    {
+      "action": "article.deleted",
+      "resourceId": "article-1788841429888",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-10-01T04:06:48.676600Z"
+    },
+    {
+      "action": "category.created",
+      "resourceId": "rumor",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-10-01T04:05:44.132201Z"
+    },
+    {
+      "action": "epaper.deleted",
+      "resourceId": "epaper-1790443370905",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T17:23:09.947232Z"
+    },
+    {
+      "action": "epaper.download_requested",
+      "resourceId": "epaper-1790443370905",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T17:23:09.653762Z"
+    },
+    {
+      "action": "epaper.download_requested",
+      "resourceId": "epaper-1790443370905",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T17:22:51.174194Z"
+    },
+    {
+      "action": "epaper.created",
+      "resourceId": "epaper-1790443370905",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T17:22:50.905162Z"
+    },
+    {
+      "action": "media.uploaded",
+      "resourceId": "media-1790443370752-SWoAbkI3.pdf",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T17:22:50.808001Z"
+    },
+    {
+      "action": "site_settings.updated",
+      "resourceId": "site",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T17:20:48.025372Z"
+    },
+    {
+      "action": "site_settings.updated",
+      "resourceId": "site",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T17:20:47.855720Z"
+    },
+    {
+      "action": "media.deleted",
+      "resourceId": "media-1790411027718-7yoiH40t.png",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T08:39:26.957290Z"
+    },
+    {
+      "action": "media.deleted",
+      "resourceId": "media-1790411963596-WVpHhowa.png",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T08:39:26.332192Z"
+    },
+    {
+      "action": "site_settings.updated",
+      "resourceId": "site",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T08:39:24.419410Z"
+    },
+    {
+      "action": "site_settings.updated",
+      "resourceId": "site",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T08:39:24.006719Z"
+    },
+    {
+      "action": "media.uploaded",
+      "resourceId": "media-1790411963596-WVpHhowa.png",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T08:39:23.660560Z"
+    },
+    {
+      "action": "site_settings.updated",
+      "resourceId": "site",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T08:36:23.846524Z"
+    },
+    {
+      "action": "media.uploaded",
+      "resourceId": "media-1790411783334-12KeVJqD.png",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T08:36:23.447467Z"
+    },
+    {
+      "action": "media.uploaded",
+      "resourceId": "media-1790411027718-7yoiH40t.png",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T08:23:47.812268Z"
+    },
+    {
+      "action": "site_settings.updated",
+      "resourceId": "site",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-26T05:44:36.841385Z"
+    },
+    {
+      "action": "article.published",
+      "resourceId": "article-1788841429888",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-08T04:46:05.718421Z"
+    },
+    {
+      "action": "article.created",
+      "resourceId": "article-1788841429888",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-08T04:23:49.888450Z"
+    },
+    {
+      "action": "article.published",
+      "resourceId": "article-1788838433073",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-08T04:03:42.629417Z"
+    },
+    {
+      "action": "article.created",
+      "resourceId": "article-1788838433073",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-08T03:33:53.088376Z"
+    },
+    {
+      "action": "article.published",
+      "resourceId": "article-1788704071746",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-06T14:14:31.912257Z"
+    },
+    {
+      "action": "article.created",
+      "resourceId": "article-1788704071746",
+      "actor": "admin@magelangekspres.local",
+      "at": "2026-09-06T14:14:31.750187Z"
+    },
+    {
+      "action": "admin.password_reset",
+      "resourceId": "adminmagelangekspress@gmail.com",
+      "actor": "local-operator",
+      "at": "2026-10-13T05:05:23.6313510Z"
+    },
+    {
+      "action": "admin.password_reset",
+      "resourceId": "admin@gmail.com",
+      "actor": "local-operator",
+      "at": "2026-10-13T05:05:23.6313510Z"
+    },
+    {
+      "action": "admin.password_reset",
+      "resourceId": "authorrole@gmail.com",
+      "actor": "local-operator",
+      "at": "2026-10-13T05:05:23.6313510Z"
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@magelangekspres.local",
+      "passwordHash": "",
+      "role": "Super Admin",
+      "subscriber": true
+    },
+    {
+      "email": "editor@magelangekspres.local",
+      "passwordHash": "",
+      "role": "Editor"
+    },
+    {
+      "email": "author@magelangekspres.local",
+      "passwordHash": "",
+      "role": "Author",
+      "subscriber": false,
+      "emailVerified": true
+    },
+    {
+      "email": "pembaca@magelangekspres.local",
+      "passwordHash": "6a4581fc00a5e4c4ae243c661178fcb0ce28888c8c064ad00cab9a9394a18b94",
+      "role": "Reader",
+      "subscriber": false,
+      "emailVerified": false
+    },
+    {
+      "email": "zesi@gmail.com",
+      "passwordHash": "e0704aea8a9de4f1a42d68a87ae745352d7b5fad0b7bd4351b2cc8d79b4bb306",
+      "role": "Reader",
+      "subscriber": true,
+      "emailVerified": true
+    },
+    {
+      "email": "zesiwalikhsani93@gmail.com",
+      "passwordHash": "4e7caa66eb339605fd3bb5d84d719cdbb4a416a7922135b456e358c219619d64",
+      "role": "Reader",
+      "subscriber": false,
+      "emailVerified": false
+    },
+    {
+      "email": "febianakharisma497@gmail.com",
+      "passwordHash": "pbkdf2-sha256:210000:OkbaO07m2r4AZkFQo1FYLw==:ngucLIw69eOG8Z4vv75n4-VCKrYRXdTppgsNCSFfdPQ=",
+      "role": "Reader",
+      "subscriber": false,
+      "emailVerified": false
+    },
+    {
+      "email": "pelanggan5913@magelangekspres.local",
+      "passwordHash": "pbkdf2-sha256:210000:XeqCH7jyhKxBW3U0Go5WJw==:51zah0doei80BFdivAxgxywU8Y3gFJnO5F4BJmg0uOs=",
+      "role": "Reader",
+      "subscriber": false,
+      "emailVerified": false
+    },
+    {
+      "email": "pelanggan.lokal@magelangekspres.local",
+      "passwordHash": "pbkdf2-sha256:210000:iCHEvo_GM8ldQQ5hLD6rhg==:eh8LCZcfu-GTu0mEnRkKL5KAd3940cja2TY1IfIR98g=",
+      "role": "Reader",
+      "subscriber": false,
+      "emailVerified": false
+    }
+  ],
+  "categories": [
+    {
+      "slug": "berita-utama",
+      "name": "BERITA UTAMA",
+      "public": true
+    },
+    {
+      "slug": "lokal",
+      "name": "LOKAL",
+      "public": true
+    },
+    {
+      "slug": "terbaru",
+      "name": "TERBARU",
+      "public": true
+    },
+    {
+      "slug": "e-paper",
+      "name": "E-PAPER",
+      "public": true
+    },
+    {
+      "slug": "magelang-kota",
+      "name": "MAGELANG KOTA",
+      "public": true
+    },
+    {
+      "slug": "kabupaten-magelang",
+      "name": "KABUPATEN MAGELANG",
+      "public": true
+    },
+    {
+      "slug": "jateng",
+      "name": "JATENG",
+      "public": true
+    },
+    {
+      "slug": "politik",
+      "name": "POLITIK",
+      "public": true
+    },
+    {
+      "slug": "ekonomi",
+      "name": "EKONOMI",
+      "public": true
+    },
+    {
+      "slug": "koran-sekolah",
+      "name": "KORAN SEKOLAH",
+      "public": true
+    },
+    {
+      "slug": "kampung-inovatif",
+      "name": "KAMPUNG INOVATIF",
+      "public": true
+    },
+    {
+      "slug": "lifestyle",
+      "name": "LIFESTYLE",
+      "public": true
+    },
+    {
+      "slug": "opini",
+      "name": "OPINI",
+      "public": true
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv-1788713011075",
+      "userId": "admin@magelangekspres.local",
+      "packageId": "premium_1_month",
+      "amount": 49000,
+      "status": "paid",
+      "createdAt": "2026-09-06T16:43:31.077422Z",
+      "paidAt": "2026-09-06T16:43:31.363687Z"
+    }
+  ],
+  "subscriptions": [
+    {
+      "userId": "admin@magelangekspres.local",
+      "packageId": "premium_1_month",
+      "startDate": "2026-09-06T16:43:31.363687Z",
+      "endDate": "2026-10-06T16:43:31.363687Z",
+      "status": "active"
+    }
+  ],
+  "downloadLogs": [
+    {
+      "userId": "admin@magelangekspres.local",
+      "epaperEditionId": "epaper-1790443370905",
+      "fileUrl": "http://127.0.0.1:8787/private/epapers/epaper-1790443370905/admin%40magelangekspres.local.pdf?expires=1790443970974&signature=f47674bc8b1b362f21bccd5450b7b23579d2deef8a7b417573bdbd03e95f56f0",
+      "downloadedAt": "2026-09-26T17:22:51.174194Z"
+    },
+    {
+      "userId": "admin@magelangekspres.local",
+      "epaperEditionId": "epaper-1790443370905",
+      "fileUrl": "http://127.0.0.1:8787/private/epapers/epaper-1790443370905/admin%40magelangekspres.local.pdf?expires=1790443989651&signature=ac6b88cb829b118d5bcd36b6f22460e8c261f99f873d5ce71e2bea838f121f18",
+      "downloadedAt": "2026-09-26T17:23:09.653762Z"
+    }
+  ],
+  "adminUsers": [
+    {
+      "email": "admin@magelangekspres.local",
+      "passwordHash": "53e3aa3dedddb8f2f634984c0c5bef0a0a6f94a80228e129c83a9e08a72eaa80",
+      "role": "Super Admin",
+      "subscriber": true,
+      "status": "active"
+    },
+    {
+      "email": "editor@magelangekspres.local",
+      "passwordHash": "53e3aa3dedddb8f2f634984c0c5bef0a0a6f94a80228e129c83a9e08a72eaa80",
+      "role": "Editor",
+      "status": "active"
+    },
+    {
+      "email": "author@magelangekspres.local",
+      "passwordHash": "53e3aa3dedddb8f2f634984c0c5bef0a0a6f94a80228e129c83a9e08a72eaa80",
+      "role": "Author",
+      "status": "active"
+    },
+    {
+      "email": "author.test@example.com",
+      "passwordHash": "b55c8792d1ce458e279308835f8a97b580263503e76e1998e279703e35ad0c2e",
+      "role": "Author",
+      "status": "active"
+    },
+    {
+      "email": "admin@gmail.com",
+      "passwordHash": "pbkdf2-sha256:210000:65zPae9exHWbmngpM-vngg==:8F7mmvUyZXwQ_UmjEOBB5z_4tNLwBOVnEKEGBwjrt9M=",
+      "role": "Editor",
+      "status": "active"
+    },
+    {
+      "email": "zesiwalikhsani93@gmail.com",
+      "passwordHash": "e71670edc152e4eda3a66a37111c9897f91b6043000e759e80d0b68ae987ed86",
+      "role": "Author",
+      "status": "active"
+    },
+    {
+      "email": "cantigi22@gmail.com",
+      "passwordHash": "pbkdf2-sha256:210000:ONGp5q6vDRFOQJwTswVMrQ==:5t9-r95rkbzJV1uE4JTFVAImtVD_MomjXx-5l826-5Q=",
+      "role": "Editor",
+      "status": "active"
+    },
+    {
+      "email": "pemilik@magelangekspres.local",
+      "passwordHash": "pbkdf2-sha256:210000:j_ORtVDwf6Ryfeq2jxXZNQ:zDn4zNauNaAEVsQXACgXfmycux_iRipxD6xuMFuXDUY",
+      "role": "Super Admin",
+      "status": "active"
+    },
+    {
+      "email": "editor5913@magelangekspres.local",
+      "passwordHash": "pbkdf2-sha256:210000:wgSdwagZJjdLCQtpezYPrg==:SZjQVjZ6Cmorp48ajH0-uuKbQ2VWOF6SeYPJ67pLRAk=",
+      "role": "Editor",
+      "status": "active"
+    },
+    {
+      "email": "author5913@magelangekspres.local",
+      "passwordHash": "pbkdf2-sha256:210000:E-c3-A4aEvZj19q-EDa_CA==:Tukvn92ZTG5mMMulmxUCqIywA0d9E6QxMUOmjOP-ouc=",
+      "role": "Author",
+      "status": "active"
+    },
+    {
+      "email": "editor.lokal@magelangekspres.local",
+      "passwordHash": "pbkdf2-sha256:210000:jq9nVSsb6_rzPV2cImSQKA==:_-WjEOHwEhF1pouezG07sMhaNUm6HREdhDCrb2NHLKc=",
+      "role": "Editor",
+      "status": "active"
+    },
+    {
+      "email": "author.lokal@magelangekspres.local",
+      "passwordHash": "pbkdf2-sha256:210000:y7iXD25JbIBbQMse4-Q9HQ==:Bmk7174ZglVA6mpjsJmrZ7_bfjW5K8bksPnPgAS771o=",
+      "role": "Author",
+      "status": "active"
+    },
+    {
+      "email": "adminmagelangekspress@gmail.com",
+      "passwordHash": "pbkdf2-sha256:210000:Fm4-95aC9TNZC5mIy3pw3A==:lkA_KWeVat2BV6SlAKTcIO1g8hbNdBo-_PZGr4w4TiQ=",
+      "role": "Super Admin",
+      "status": "active"
+    },
+    {
+      "email": "authorrole@gmail.com",
+      "passwordHash": "pbkdf2-sha256:210000:-PIR3OtwgpFz11ImsdsUeA==:U3c-7P-hffl4tTVYWu1bSK8nSeueSzMGZz9CpMM1m3g=",
+      "role": "Author",
+      "status": "active"
+    }
+  ],
+  "siteSettings": {
+    "brandName": "MAGELANG EKSPRES",
+    "tagline": "Akurat, Terpercaya, dan Menginspirasi",
+    "logoUrl": "",
+    "heroLabel": "HEADLINE",
+    "heroTitle": "",
+    "heroExcerpt": "",
+    "heroImageUrl": "",
+    "hotTopics": [
+      "Pilkada Magelang",
+      "Infrastruktur",
+      "Lingkungan",
+      "Ekonomi"
+    ],
+    "epaperTitle": "E-Paper Magelang Ekspres",
+    "epaperCoverImageUrl": "",
+    "subscriptionTitle": "Baca berita lengkap tanpa batas",
+    "subscriptionDescription": "Nikmati akses artikel premium, e-paper harian, dan arsip edisi.",
+    "paymentMethods": [
+      {
+        "id": "bank-transfer",
+        "name": "Transfer Bank",
+        "instructions": "",
+        "enabled": false
+      },
+      {
+        "id": "qris",
+        "name": "QRIS",
+        "instructions": "",
+        "enabled": false
+      }
+    ]
+  },
+  "visitLog": [
+    {
+      "date": "2026-09-30",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-09-30",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-01",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/health;"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/saved-items"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-02",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/saved-items"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-03",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/health"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-04",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/epapers/edisi-2026-09-06"
+    },
+    {
+      "date": "2026-10-06",
+      "path": "/api/epapers/edisi-2026-09-06"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers/epaper-2026-08-13"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers/epaper-2026-08-13"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers/epaper-2026-08-13"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/sitemap.xml"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/robots.txt"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers/epaper-2026-08-13"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-07",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-08",
+      "path": "/api/epapers/epaper-2026-08-13"
+    },
+    {
+      "date": "2026-10-09",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-09",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/subscription/packages"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notification-1791431305190823",
+      "type": "user",
+      "title": "Pelanggan baru terdaftar",
+      "message": "pelanggan.lokal@magelangekspres.local membuat akun pembaca dari frontend.",
+      "actor": "pelanggan.lokal@magelangekspres.local",
+      "resourceId": "pelanggan.lokal@magelangekspres.local",
+      "read": false,
+      "createdAt": "2026-10-08T03:48:25.190823Z"
+    },
+    {
+      "id": "notification-1791396015471570",
+      "type": "user",
+      "title": "Pelanggan baru terdaftar",
+      "message": "pelanggan5913@magelangekspres.local membuat akun pembaca dari frontend.",
+      "actor": "pelanggan5913@magelangekspres.local",
+      "resourceId": "pelanggan5913@magelangekspres.local",
+      "read": false,
+      "createdAt": "2026-10-07T18:00:15.471570Z"
+    },
+    {
+      "id": "notification-1791386883027798",
+      "type": "user",
+      "title": "Pelanggan baru terdaftar",
+      "message": "febianakharisma497@gmail.com membuat akun pembaca dari frontend.",
+      "actor": "febianakharisma497@gmail.com",
+      "resourceId": "febianakharisma497@gmail.com",
+      "read": false,
+      "createdAt": "2026-10-07T15:28:03.027798Z"
+    },
+    {
+      "id": "notification-1791026431694895",
+      "type": "user",
+      "title": "Pelanggan baru terdaftar",
+      "message": "zesiwalikhsani93@gmail.com membuat akun pembaca dari frontend.",
+      "actor": "zesiwalikhsani93@gmail.com",
+      "resourceId": "zesiwalikhsani93@gmail.com",
+      "read": true,
+      "createdAt": "2026-10-03T11:20:31.694895Z"
+    }
+  ],
+  "authSessions": [],
+  "articleRevisions": []
+}

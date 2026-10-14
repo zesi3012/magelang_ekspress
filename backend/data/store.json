@@ -31,6 +31,46 @@
       "epaperId": "epaper-2026-08-13",
       "pageNumber": 6,
       "socialLinks": {}
+    },
+    {
+      "id": "article-1791948305579",
+      "title": "Tiga Hari Menghilang, Gadis di Serang Ternyata Kabur gegara Ribut Sama Pacar  Baca artikel detiknews, \"Tiga Hari Menghil",
+      "slug": "tiga-hari-menghilang-gadis-di-serang-ternyata-kabur-gegara-ribut-sama-pacar-baca-artikel-detiknews-tiga-hari-menghil",
+      "seoTitle": "",
+      "seoDescription": "",
+      "category": "BERITA UTAMA",
+      "excerpt": "Setelah keberadaan ZR diketahui, petugas segera menghubungi pihak keluarga untuk menyampaikan kabar bahwa ZR telah ditemukan. Keluarga kemudian menjemput ZR dan membawanya kembali ke rumah dalam keadaan selamat.\n\nKapolsek Kragilan AKP Ilman Robiana menjelaskan, ZR diketahui pergi meninggalkan rumah menggunakan sepeda setelah terlibat perselisihan atau pertengkaran dengan pacarnya. Pacar ZR diketahui tinggal tepat di depan rumahnya.\n\n\n\nBaca artikel detiknews, \"Tiga Hari Menghilang, Gadis di Serang Ternyata Kabur gegara Ribut Sama Pacar\" selengkapnya https://news.detik.com/berita/d-8706094/tiga-hari-menghilang-gadis-di-serang-ternyata-kabur-gegara-ribut-sama-pacar.\n\nDownload Apps Detikcom Sekarang https://apps.detik.com/detik/",
+      "body": "Serang - Seorang gadis berinisial ZR (21) kabur dari rumahnya di Desa Kendayakan, Kecamatan Kragilan, Kabupaten Serang. Penyebabnya, ia ribut dengan pacarnya yang merupakan tetangga depan rumahnya.\nOrang tua ZR sempat melaporkan kehilangan anaknya ke Polsek Kragilan pada Senin (12/10) pagi. Mereka menyebut ZR meninggalkan rumah sejak Sabtu (10/10).\n\nPolisi menindaklanjuti laporan tersebut. ZR pun ditemukan pada Senin (12/10) sekitar pukul 21.00 WIB di sebuah taman perumahan KGS, Desa Sentul, Kecamatan Kragilan.\n\nBaca artikel detiknews, \"Tiga Hari Menghilang, Gadis di Serang Ternyata Kabur gegara Ribut Sama Pacar\" selengkapnya https://news.detik.com/berita/d-8706094/tiga-hari-menghilang-gadis-di-serang-ternyata-kabur-gegara-ribut-sama-pacar.\n\n https://apps.detik.com/detik/",
+      "isPremium": false,
+      "mainImageUrl": "http://127.0.0.1:8787/media/media-1791948289958-b6dckEAL.jpg",
+      "mainImageBlurUrl": "",
+      "mainImageAltText": "Foto hanya ilusi",
+      "socialLinks": {
+        "Website": "https://apps.detik.com/detik/"
+      },
+      "status": "draft",
+      "author": "adminmagelangekspress@gmail.com",
+      "updatedAt": "2026-10-14T03:25:05.579357Z"
+    },
+    {
+      "id": "article-1791949664888",
+      "title": "aaaa",
+      "slug": "aaaa",
+      "seoTitle": "",
+      "seoDescription": "",
+      "category": "LOKAL",
+      "excerpt": "aaaa",
+      "body": "aaaa",
+      "isPremium": false,
+      "mainImageUrl": "http://127.0.0.1:8787/media/media-1791949644037-TmcICkWi.jpg",
+      "mainImageBlurUrl": "",
+      "mainImageAltText": "aaa",
+      "socialLinks": {
+        "Website": "https://www.go.id"
+      },
+      "status": "draft",
+      "author": "adminmagelangekspress@gmail.com",
+      "updatedAt": "2026-10-14T03:47:44.888035Z"
     }
   ],
   "epapers": [
@@ -480,6 +520,84 @@
       "resourceId": "article-1788704071746",
       "actor": "admin@magelangekspres.local",
       "at": "2026-09-06T14:14:31.750187Z"
+    },
+    {
+      "action": "admin.password_reset",
+      "resourceId": "adminmagelangekspress@gmail.com",
+      "actor": "local-operator",
+      "at": "2026-10-13T05:05:23.6313510Z"
+    },
+    {
+      "action": "admin.password_reset",
+      "resourceId": "admin@gmail.com",
+      "actor": "local-operator",
+      "at": "2026-10-13T05:05:23.6313510Z"
+    },
+    {
+      "action": "admin.password_reset",
+      "resourceId": "authorrole@gmail.com",
+      "actor": "local-operator",
+      "at": "2026-10-13T05:05:23.6313510Z"
+    },
+    {
+      "action": "media.uploaded",
+      "resourceId": "media-1791946553662-xRvhD-_x.jpg",
+      "actor": "adminmagelangekspress@gmail.com",
+      "at": "2026-10-14T02:55:53.671066Z"
+    },
+    {
+      "action": "media.uploaded",
+      "resourceId": "media-1791947229105-umqh-t3A.jpg",
+      "actor": "adminmagelangekspress@gmail.com",
+      "at": "2026-10-14T03:07:09.105836Z"
+    },
+    {
+      "action": "article.created",
+      "resourceId": "article-1791947240153",
+      "actor": "adminmagelangekspress@gmail.com",
+      "at": "2026-10-14T03:07:20.153075Z"
+    },
+    {
+      "action": "article.updated",
+      "resourceId": "article-1791947240153",
+      "actor": "adminmagelangekspress@gmail.com",
+      "at": "2026-10-14T03:17:30.943773Z"
+    },
+    {
+      "action": "article.deleted",
+      "resourceId": "article-1791947240153",
+      "actor": "adminmagelangekspress@gmail.com",
+      "at": "2026-10-14T03:17:42.361696Z"
+    },
+    {
+      "action": "media.uploaded",
+      "resourceId": "media-1791948289958-b6dckEAL.jpg",
+      "actor": "adminmagelangekspress@gmail.com",
+      "at": "2026-10-14T03:24:49.963323Z"
+    },
+    {
+      "action": "article.created",
+      "resourceId": "article-1791948305579",
+      "actor": "adminmagelangekspress@gmail.com",
+      "at": "2026-10-14T03:25:05.579357Z"
+    },
+    {
+      "action": "media.uploaded",
+      "resourceId": "media-1791949594520-JBNDjxa_.jpg",
+      "actor": "adminmagelangekspress@gmail.com",
+      "at": "2026-10-14T03:46:34.537204Z"
+    },
+    {
+      "action": "media.uploaded",
+      "resourceId": "media-1791949644037-TmcICkWi.jpg",
+      "actor": "adminmagelangekspress@gmail.com",
+      "at": "2026-10-14T03:47:24.044910Z"
+    },
+    {
+      "action": "article.created",
+      "resourceId": "article-1791949664888",
+      "actor": "adminmagelangekspress@gmail.com",
+      "at": "2026-10-14T03:47:44.888035Z"
     }
   ],
   "users": [
@@ -539,6 +657,13 @@
     {
       "email": "pelanggan.lokal@magelangekspres.local",
       "passwordHash": "pbkdf2-sha256:210000:iCHEvo_GM8ldQQ5hLD6rhg==:eh8LCZcfu-GTu0mEnRkKL5KAd3940cja2TY1IfIR98g=",
+      "role": "Reader",
+      "subscriber": false,
+      "emailVerified": false
+    },
+    {
+      "email": "zesiwalikhsani30@gmail.com",
+      "passwordHash": "pbkdf2-sha256:210000:jJcjOSmBBBfgA5nXhW8k0w==:HdK9ANvB7X9GXZQooTRko_vhS4c2JrTfTmQ20M3SWE0=",
       "role": "Reader",
       "subscriber": false,
       "emailVerified": false
@@ -648,74 +773,86 @@
   "adminUsers": [
     {
       "email": "admin@magelangekspres.local",
-      "passwordHash": "53e3aa3dedddb8f2f634984c0c5bef0a0a6f94a80228e129c83a9e08a72eaa80",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
       "role": "Super Admin",
       "subscriber": true,
-      "status": "disabled"
+      "status": "active"
     },
     {
       "email": "editor@magelangekspres.local",
-      "passwordHash": "53e3aa3dedddb8f2f634984c0c5bef0a0a6f94a80228e129c83a9e08a72eaa80",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
       "role": "Editor",
-      "status": "disabled"
+      "status": "active"
     },
     {
       "email": "author@magelangekspres.local",
-      "passwordHash": "53e3aa3dedddb8f2f634984c0c5bef0a0a6f94a80228e129c83a9e08a72eaa80",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
       "role": "Author",
-      "status": "disabled"
+      "status": "active"
     },
     {
       "email": "author.test@example.com",
-      "passwordHash": "b55c8792d1ce458e279308835f8a97b580263503e76e1998e279703e35ad0c2e",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
       "role": "Author",
       "status": "active"
     },
     {
       "email": "admin@gmail.com",
-      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
-      "role": "Author",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
+      "role": "Editor",
       "status": "active"
     },
     {
       "email": "zesiwalikhsani93@gmail.com",
-      "passwordHash": "e71670edc152e4eda3a66a37111c9897f91b6043000e759e80d0b68ae987ed86",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
       "role": "Author",
       "status": "active"
     },
     {
       "email": "cantigi22@gmail.com",
-      "passwordHash": "pbkdf2-sha256:210000:ONGp5q6vDRFOQJwTswVMrQ==:5t9-r95rkbzJV1uE4JTFVAImtVD_MomjXx-5l826-5Q=",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
       "role": "Editor",
       "status": "active"
     },
     {
       "email": "pemilik@magelangekspres.local",
-      "passwordHash": "pbkdf2-sha256:210000:j_ORtVDwf6Ryfeq2jxXZNQ:zDn4zNauNaAEVsQXACgXfmycux_iRipxD6xuMFuXDUY",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
       "role": "Super Admin",
       "status": "active"
     },
     {
       "email": "editor5913@magelangekspres.local",
-      "passwordHash": "pbkdf2-sha256:210000:wgSdwagZJjdLCQtpezYPrg==:SZjQVjZ6Cmorp48ajH0-uuKbQ2VWOF6SeYPJ67pLRAk=",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
       "role": "Editor",
       "status": "active"
     },
     {
       "email": "author5913@magelangekspres.local",
-      "passwordHash": "pbkdf2-sha256:210000:E-c3-A4aEvZj19q-EDa_CA==:Tukvn92ZTG5mMMulmxUCqIywA0d9E6QxMUOmjOP-ouc=",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
       "role": "Author",
       "status": "active"
     },
     {
       "email": "editor.lokal@magelangekspres.local",
-      "passwordHash": "pbkdf2-sha256:210000:jq9nVSsb6_rzPV2cImSQKA==:_-WjEOHwEhF1pouezG07sMhaNUm6HREdhDCrb2NHLKc=",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
       "role": "Editor",
       "status": "active"
     },
     {
       "email": "author.lokal@magelangekspres.local",
       "passwordHash": "pbkdf2-sha256:210000:y7iXD25JbIBbQMse4-Q9HQ==:Bmk7174ZglVA6mpjsJmrZ7_bfjW5K8bksPnPgAS771o=",
+      "role": "Author",
+      "status": "active"
+    },
+    {
+      "email": "adminmagelangekspress@gmail.com",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
+      "role": "Super Admin",
+      "status": "active"
+    },
+    {
+      "email": "authorrole@gmail.com",
+      "passwordHash": "pbkdf2-sha256:210000:TMWioWU8mICFjEoptX1nXQ==:D9I5jCu9Xn6uhJ5ghYjwutkiDyFS4XY+jl6z9xx77rc=",
       "role": "Author",
       "status": "active"
     }
@@ -1777,9 +1914,287 @@
     {
       "date": "2026-10-09",
       "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-13",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/epapers/epaper-2026-08-13"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/search"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/search"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/search"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/search"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/search"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/search"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/favicon.ico"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/epapers"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/site-settings"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/articles"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-14",
+      "path": "/api/subscription-plans"
     }
   ],
   "notifications": [
+    {
+      "id": "notification-1791943390685796",
+      "type": "user",
+      "title": "Pelanggan baru terdaftar",
+      "message": "zesiwalikhsani30@gmail.com membuat akun pembaca dari frontend.",
+      "actor": "zesiwalikhsani30@gmail.com",
+      "resourceId": "zesiwalikhsani30@gmail.com",
+      "read": false,
+      "createdAt": "2026-10-14T02:03:10.685796Z"
+    },
     {
       "id": "notification-1791431305190823",
       "type": "user",
@@ -1821,6 +2236,176 @@
       "createdAt": "2026-10-03T11:20:31.694895Z"
     }
   ],
-  "authSessions": [],
-  "articleRevisions": []
+  "authSessions": [
+    {
+      "tokenHash": "1c2b3fcfb431b6d1c60b10ce1647f8281c6c0cb6581645dd3051345426d69fc9",
+      "email": "adminmagelangekspress@gmail.com",
+      "role": "Super Admin",
+      "expiresAt": "2026-10-14T08:47:41.601998Z",
+      "admin": true,
+      "subscriber": false
+    },
+    {
+      "tokenHash": "842c6bd8651d87b3a4ee127eea7d49a793fe19bb98fe9e6c8c39d4798d1cbac9",
+      "email": "adminmagelangekspress@gmail.com",
+      "role": "Super Admin",
+      "expiresAt": "2026-10-14T08:52:24.801432Z",
+      "admin": true,
+      "subscriber": false
+    },
+    {
+      "tokenHash": "5a8889827a836c4bd09ccab96d8cda4a344010e8af9dcc36b7b892e7dad721c3",
+      "email": "adminmagelangekspress@gmail.com",
+      "role": "Super Admin",
+      "expiresAt": "2026-10-14T10:31:48.551209Z",
+      "admin": true,
+      "subscriber": false
+    },
+    {
+      "tokenHash": "36f2a581ec06932bf0eccf19847d8945e49d709322d8a910a169cc87a94a326c",
+      "email": "adminmagelangekspress@gmail.com",
+      "role": "Super Admin",
+      "expiresAt": "2026-10-14T10:41:20.177983Z",
+      "admin": true,
+      "subscriber": false
+    },
+    {
+      "tokenHash": "0fa287de6cc2b1493301a16e678466ddf55c22d5f4a224e6d43d20f49acb2f92",
+      "email": "adminmagelangekspress@gmail.com",
+      "role": "Super Admin",
+      "expiresAt": "2026-10-14T10:46:42.607836Z",
+      "admin": true,
+      "subscriber": false
+    },
+    {
+      "tokenHash": "edef6abe80fd7668545ba34e0fe7208271077c51d8d7290b269d0193d24bf52c",
+      "email": "adminmagelangekspress@gmail.com",
+      "role": "Super Admin",
+      "expiresAt": "2026-10-14T10:53:02.191049Z",
+      "admin": true,
+      "subscriber": false
+    },
+    {
+      "tokenHash": "e049ba0756edffe96b8aa7785b82c096cb80b73b93c7a08a46e8ad4b91e5390a",
+      "email": "adminmagelangekspress@gmail.com",
+      "role": "Super Admin",
+      "expiresAt": "2026-10-14T11:06:00.251714Z",
+      "admin": true,
+      "subscriber": false
+    },
+    {
+      "tokenHash": "2a6c262b50edf5c1ef1f4c621eac54019bfc5d09da5c4f873a284cd601a2e637",
+      "email": "adminmagelangekspress@gmail.com",
+      "role": "Super Admin",
+      "expiresAt": "2026-10-14T11:34:35.430143Z",
+      "admin": true,
+      "subscriber": false
+    },
+    {
+      "tokenHash": "daa4d5f0b9652e9a571bf855724ae13701d906a42d4d80eb45d242429664dfc5",
+      "email": "adminmagelangekspress@gmail.com",
+      "role": "Super Admin",
+      "expiresAt": "2026-10-14T11:45:52.618940Z",
+      "admin": true,
+      "subscriber": false
+    }
+  ],
+  "articleRevisions": [
+    {
+      "id": "article-revision-1791947240153075",
+      "articleId": "article-1791947240153",
+      "actor": "adminmagelangekspress@gmail.com",
+      "status": "draft",
+      "note": "Artikel dibuat.",
+      "snapshot": {
+        "title": "hai",
+        "slug": "hai",
+        "seoTitle": "",
+        "seoDescription": "",
+        "category": "BERITA UTAMA",
+        "excerpt": "aaaaaaaa",
+        "body": "aaaaa",
+        "mainImageUrl": "http://127.0.0.1:8787/media/media-1791947229105-umqh-t3A.jpg",
+        "mainImageBlurUrl": "",
+        "mainImageAltText": "aaaaaa",
+        "socialLinks": {},
+        "isPremium": false,
+        "status": "draft"
+      },
+      "createdAt": "2026-10-14T03:07:20.153075Z"
+    },
+    {
+      "id": "article-revision-1791947850943773",
+      "articleId": "article-1791947240153",
+      "actor": "adminmagelangekspress@gmail.com",
+      "status": "draft",
+      "note": "Perubahan artikel.",
+      "snapshot": {
+        "title": "hai",
+        "slug": "hai",
+        "seoTitle": "",
+        "seoDescription": "",
+        "category": "BERITA UTAMA",
+        "excerpt": "aaaaaaaa",
+        "body": "aaaaa",
+        "mainImageUrl": "http://127.0.0.1:8787/media/media-1791947229105-umqh-t3A.jpg",
+        "mainImageBlurUrl": "",
+        "mainImageAltText": "aaaaaa",
+        "socialLinks": {},
+        "isPremium": false,
+        "status": "draft"
+      },
+      "createdAt": "2026-10-14T03:17:30.943773Z"
+    },
+    {
+      "id": "article-revision-1791948305579357",
+      "articleId": "article-1791948305579",
+      "actor": "adminmagelangekspress@gmail.com",
+      "status": "draft",
+      "note": "Artikel dibuat.",
+      "snapshot": {
+        "title": "Tiga Hari Menghilang, Gadis di Serang Ternyata Kabur gegara Ribut Sama Pacar  Baca artikel detiknews, \"Tiga Hari Menghil",
+        "slug": "tiga-hari-menghilang-gadis-di-serang-ternyata-kabur-gegara-ribut-sama-pacar-baca-artikel-detiknews-tiga-hari-menghil",
+        "seoTitle": "",
+        "seoDescription": "",
+        "category": "BERITA UTAMA",
+        "excerpt": "Setelah keberadaan ZR diketahui, petugas segera menghubungi pihak keluarga untuk menyampaikan kabar bahwa ZR telah ditemukan. Keluarga kemudian menjemput ZR dan membawanya kembali ke rumah dalam keadaan selamat.\n\nKapolsek Kragilan AKP Ilman Robiana menjelaskan, ZR diketahui pergi meninggalkan rumah menggunakan sepeda setelah terlibat perselisihan atau pertengkaran dengan pacarnya. Pacar ZR diketahui tinggal tepat di depan rumahnya.\n\n\n\nBaca artikel detiknews, \"Tiga Hari Menghilang, Gadis di Serang Ternyata Kabur gegara Ribut Sama Pacar\" selengkapnya https://news.detik.com/berita/d-8706094/tiga-hari-menghilang-gadis-di-serang-ternyata-kabur-gegara-ribut-sama-pacar.\n\nDownload Apps Detikcom Sekarang https://apps.detik.com/detik/",
+        "body": "Serang - Seorang gadis berinisial ZR (21) kabur dari rumahnya di Desa Kendayakan, Kecamatan Kragilan, Kabupaten Serang. Penyebabnya, ia ribut dengan pacarnya yang merupakan tetangga depan rumahnya.\nOrang tua ZR sempat melaporkan kehilangan anaknya ke Polsek Kragilan pada Senin (12/10) pagi. Mereka menyebut ZR meninggalkan rumah sejak Sabtu (10/10).\n\nPolisi menindaklanjuti laporan tersebut. ZR pun ditemukan pada Senin (12/10) sekitar pukul 21.00 WIB di sebuah taman perumahan KGS, Desa Sentul, Kecamatan Kragilan.\n\nBaca artikel detiknews, \"Tiga Hari Menghilang, Gadis di Serang Ternyata Kabur gegara Ribut Sama Pacar\" selengkapnya https://news.detik.com/berita/d-8706094/tiga-hari-menghilang-gadis-di-serang-ternyata-kabur-gegara-ribut-sama-pacar.\n\n https://apps.detik.com/detik/",
+        "mainImageUrl": "http://127.0.0.1:8787/media/media-1791948289958-b6dckEAL.jpg",
+        "mainImageBlurUrl": "",
+        "mainImageAltText": "Foto hanya ilusi",
+        "socialLinks": {
+          "Website": "https://apps.detik.com/detik/"
+        },
+        "isPremium": false,
+        "status": "draft"
+      },
+      "createdAt": "2026-10-14T03:25:05.579357Z"
+    },
+    {
+      "id": "article-revision-1791949664888035",
+      "articleId": "article-1791949664888",
+      "actor": "adminmagelangekspress@gmail.com",
+      "status": "draft",
+      "note": "Artikel dibuat.",
+      "snapshot": {
+        "title": "aaaa",
+        "slug": "aaaa",
+        "seoTitle": "",
+        "seoDescription": "",
+        "category": "LOKAL",
+        "excerpt": "aaaa",
+        "body": "aaaa",
+        "mainImageUrl": "http://127.0.0.1:8787/media/media-1791949644037-TmcICkWi.jpg",
+        "mainImageBlurUrl": "",
+        "mainImageAltText": "aaa",
+        "socialLinks": {
+          "Website": "https://www.go.id"
+        },
+        "isPremium": false,
+        "status": "draft"
+      },
+      "createdAt": "2026-10-14T03:47:44.888035Z"
+    }
+  ]
 }

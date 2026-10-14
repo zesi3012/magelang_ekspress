@@ -704,11 +704,19 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<AppContentSettings>(
-      valueListenable: appContentSettings,
-      builder: (context, settings, _) => FutureBuilder<List<Article>>(
-        future: articlesFuture,
-        builder: (context, snapshot) {
-          final allItems = List<Article>.from(snapshot.data ?? mockArticles)
+  valueListenable: appContentSettings,
+  builder: (context, settings, _) => FutureBuilder<List<Article>>(
+    future: articlesFuture,
+    builder: (context, snapshot) {
+      // ===== DEBUG LOG =====
+      debugPrint('[HomePage] connectionState: ${snapshot.connectionState}');
+      debugPrint('[HomePage] hasData: ${snapshot.hasData}');
+      debugPrint('[HomePage] hasError: ${snapshot.hasError}');
+      debugPrint('[HomePage] data length: ${snapshot.data?.length}');
+      debugPrint('[HomePage] error: ${snapshot.error}');
+      // ===== END DEBUG =====
+
+      final allItems = List<Article>.from(snapshot.data ?? mockArticles)
             ..sort((first, second) {
               final firstDate = _articleTimestamp(first) ?? DateTime(0);
               final secondDate = _articleTimestamp(second) ?? DateTime(0);
@@ -4052,77 +4060,117 @@ class _AdminPageState extends State<AdminPage> {
     }
   }
 
-  Widget _cmsBrand() => Padding(
-    padding: const EdgeInsets.fromLTRB(18, 18, 18, 20),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(4),
-              child: SizedBox(
-                width: 58,
-                height: 34,
-                child: ColoredBox(
-                  color: Colors.white,
-                  child: Center(
-                    child: SizedBox(
-                      width: 54,
-                      child: MagelangLogo(compact: true, width: 54, height: 25),
-                    ),
-                  ),
+  Widget _cmsBrand() => Container(
+  padding: const EdgeInsets.fromLTRB(18, 20, 18, 18),
+  decoration: const BoxDecoration(
+    border: Border(
+      bottom: BorderSide(color: Color(0x33ffffff), width: 1),
+    ),
+  ),
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      // Logo bulat dengan latar putih
+      Row(
+        children: [
+          Container(
+            width: 44,
+            height: 44,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: const [
+                BoxShadow(
+                  color: Color(0x33000000),
+                  blurRadius: 6,
+                  offset: Offset(0, 2),
                 ),
-              ),
+              ],
             ),
-            const SizedBox(width: 9),
-            Expanded(
-              child: Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'MAGELANG ',
-                      style: TextStyle(
-                        fontFamily: 'Inter',
-                        color: const Color(0xffdcecff),
-                        fontSize: 13,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    ),
-                    TextSpan(
-                      text: 'EKSPRES',
-                      style: TextStyle(
-                        fontFamily: 'Inter',
-                        color: AppColors.red,
-                        fontSize: 13,
-                        fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    ),
-                  ],
-                ),
-                maxLines: 2,
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 12),
-        Padding(
-          padding: const EdgeInsets.only(left: 2),
-          child: Text(
-            _roleBrandLabel,
-            style: TextStyle(
-              fontFamily: 'Inter',
-              color: Colors.white70,
-              fontSize: 10,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 1.1,
+            clipBehavior: Clip.antiAlias,
+            child: const Padding(
+              padding: EdgeInsets.all(5),
+              child: MagelangLogo(compact: true),
             ),
           ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'MAGELANG ',
+                        style: TextStyle(
+                          fontFamily: 'Inter',
+                          color: const Color(0xffdcecff),
+                          fontSize: 13,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: 0.3,
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'EKSPRES',
+                        style: TextStyle(
+                          fontFamily: 'Inter',
+                          color: AppColors.red,
+                          fontSize: 13,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: 0.3,
+                        ),
+                      ),
+                    ],
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  'Akurat, Terpercaya, Menginspirasi',
+                  style: TextStyle(
+                    fontFamily: 'Inter',
+                    color: Colors.white.withValues(alpha: 0.55),
+                    fontSize: 9,
+                    fontStyle: FontStyle.italic,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+      const SizedBox(height: 16),
+      // Label panel (SUPER ADMIN PANEL, CMS REDAKSI, dll.)
+      Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.08),
+          borderRadius: BorderRadius.circular(4),
+          border: Border.all(
+            color: Colors.white.withValues(alpha: 0.12),
+            width: 1,
+          ),
         ),
-      ],
-    ),
-  );
+        child: Text(
+          _roleBrandLabel,
+          style: const TextStyle(
+            fontFamily: 'Inter',
+            color: Color(0xffdcecff),
+            fontSize: 9,
+            fontWeight: FontWeight.w700,
+            letterSpacing: 1.4,
+          ),
+        ),
+      ),
+    ],
+  ),
+);
 
   IconData _icon(String item) =>
       {
