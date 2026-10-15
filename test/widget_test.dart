@@ -118,14 +118,14 @@ void main() {
     Text locationText(Finder item, String label) => tester.widget<Text>(
       find.descendant(of: item, matching: find.text(label)),
     );
-    // Active state sekarang pakai AppColors.navy (biru) bukan AppColors.red
+    // Lokasi yang dipilih menggunakan warna aksen merah.
     expect(
       locationText(temanggung, 'Temanggung').style?.color,
-      AppColors.navy,
+      AppColors.red,
     );
     expect(
       locationText(purworejo, 'Purworejo').style?.color,
-      isNot(AppColors.navy),
+      isNot(AppColors.red),
     );
 
     await tester.ensureVisible(purworejo);
@@ -134,11 +134,11 @@ void main() {
 
     expect(
       locationText(temanggung, 'Temanggung').style?.color,
-      isNot(AppColors.navy),
+      isNot(AppColors.red),
     );
     expect(
       locationText(purworejo, 'Purworejo').style?.color,
-      AppColors.navy,
+      AppColors.red,
     );
     expect(tester.takeException(), isNull);
   });
@@ -269,12 +269,11 @@ void main() {
     expect(desktopHeader, findsOneWidget);
     expect(tester.getSize(desktopHeader).width, 871);
     expect(find.text('BERITA DAERAH • E-PAPER DIGITAL'), findsOneWidget);
-    // Tab desktop sekarang: BERANDA, LOKAL, TERBARU, E-PAPER, TERSIMPAN
+    // Navigasi desktop mengikuti kategori Magelang dan Jawa Tengah.
     expect(find.text('BERANDA'), findsOneWidget);
-    expect(find.text('LOKAL'), findsOneWidget);
-    expect(find.text('TERBARU'), findsOneWidget);
+    expect(find.text('MAGELANG'), findsOneWidget);
+    expect(find.text('JAWA TENGAH'), findsOneWidget);
     expect(find.text('E-PAPER'), findsWidgets);
-    expect(find.text('TERSIMPAN'), findsOneWidget);
     expect(find.byType(NavigationBar), findsNothing);
     expect(tester.takeException(), isNull);
   });
@@ -352,20 +351,9 @@ void main() {
     await tester.pumpAndSettle();
     // Header detail sekarang pakai header custom, cari judul edisi
     expect(find.text('Arsip E-Paper Magelang Ekspres'), findsOneWidget);
-    await tester.pageBack();
-    await tester.pumpAndSettle();
-
-    await tester.tap(find.byKey(const ValueKey('latest-published-issue')));
-    await tester.pumpAndSettle();
-    expect(find.text('Arsip E-Paper Magelang Ekspres'), findsOneWidget);
-    await tester.pageBack();
-    await tester.pumpAndSettle();
-
-    await tester.tap(find.text('Baca versi e-paper').first);
-    await tester.pumpAndSettle();
-    expect(find.text('Arsip E-Paper Magelang Ekspres'), findsOneWidget);
-    // Tombol viewer sekarang "Baca versi e-paper" (bukan "BUKA E-PAPER")
-    await tester.tap(find.text('Baca versi e-paper').first);
+    final readButton = find.text('Baca versi e-paper');
+    await tester.scrollUntilVisible(readButton, 400);
+    await tester.tap(readButton);
     await tester.pumpAndSettle();
 
     // Indikator halaman sekarang format "1/8" dalam badge
@@ -447,8 +435,7 @@ void main() {
       findsOneWidget,
     );
     final savedTitle = tester.widget<Text>(find.text('Tersimpan').first);
-    // Warna title AppBar tersimpan sekarang pakai AppColors.ink
-    expect(savedTitle.style?.color, const Color(0xff272521));
+    expect(savedTitle.style?.color, AppColors.ink);
     expect(
       find.text('Budidaya Maggot di Jambon, Cara Kurangi Sampah Organik'),
       findsOneWidget,

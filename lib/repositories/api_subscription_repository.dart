@@ -6,12 +6,6 @@ class ApiSubscriptionRepository implements SubscriptionRepository {
   ApiSubscriptionRepository({required this.client});
 
   final ReaderApiClient client;
-  bool _mockActive = false;
-
-  @override
-  void setMockSubscriptionActive(bool value) {
-    _mockActive = value;
-  }
 
   @override
   Future<List<SubscriptionPlan>> getActivePlans() async {
@@ -30,14 +24,6 @@ class ApiSubscriptionRepository implements SubscriptionRepository {
       // Jika backend error (offline/404/dll), fallback ke default
       return _defaultPlans();
     }
-  }
-
-  @override
-  Future<Map<String, dynamic>> checkout(
-    String planId, {
-    required String paymentMethod,
-  }) {
-    return client.checkout(planId, paymentMethod: paymentMethod);
   }
 
   /// Paket default sebagai fallback jika backend belum tersedia

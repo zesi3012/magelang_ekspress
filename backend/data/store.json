@@ -231,7 +231,7 @@
     {
       "id": "premium_1_month",
       "name": "Premium 1 Bulan",
-      "durationDays": 30,
+      "durationDays": 28,
       "price": 49000,
       "benefits": [
         "Artikel premium",
@@ -598,6 +598,12 @@
       "resourceId": "article-1791949664888",
       "actor": "adminmagelangekspress@gmail.com",
       "at": "2026-10-14T03:47:44.888035Z"
+    },
+    {
+      "action": "subscription.price_updated",
+      "resourceId": "premium_1_month",
+      "actor": "adminmagelangekspress@gmail.com",
+      "at": "2026-10-15T02:05:06.802397Z"
     }
   ],
   "users": [
@@ -2194,6 +2200,26 @@
     {
       "date": "2026-10-14",
       "path": "/api/subscription/packages"
+    },
+    {
+      "date": "2026-10-15",
+      "path": "/api/categories"
+    },
+    {
+      "date": "2026-10-15",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-15",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-15",
+      "path": "/api/subscription-plans"
+    },
+    {
+      "date": "2026-10-15",
+      "path": "/api/subscription-plans"
     }
   ],
   "notifications": [
@@ -2204,7 +2230,7 @@
       "message": "zesiwalikhsani30@gmail.com membuat akun pembaca dari frontend.",
       "actor": "zesiwalikhsani30@gmail.com",
       "resourceId": "zesiwalikhsani30@gmail.com",
-      "read": false,
+      "read": true,
       "createdAt": "2026-10-14T02:03:10.685796Z"
     },
     {
@@ -2214,7 +2240,7 @@
       "message": "pelanggan.lokal@magelangekspres.local membuat akun pembaca dari frontend.",
       "actor": "pelanggan.lokal@magelangekspres.local",
       "resourceId": "pelanggan.lokal@magelangekspres.local",
-      "read": false,
+      "read": true,
       "createdAt": "2026-10-08T03:48:25.190823Z"
     },
     {
@@ -2224,7 +2250,7 @@
       "message": "pelanggan5913@magelangekspres.local membuat akun pembaca dari frontend.",
       "actor": "pelanggan5913@magelangekspres.local",
       "resourceId": "pelanggan5913@magelangekspres.local",
-      "read": false,
+      "read": true,
       "createdAt": "2026-10-07T18:00:15.471570Z"
     },
     {
@@ -2234,7 +2260,7 @@
       "message": "febianakharisma497@gmail.com membuat akun pembaca dari frontend.",
       "actor": "febianakharisma497@gmail.com",
       "resourceId": "febianakharisma497@gmail.com",
-      "read": false,
+      "read": true,
       "createdAt": "2026-10-07T15:28:03.027798Z"
     },
     {
@@ -2318,6 +2344,14 @@
       "email": "adminmagelangekspress@gmail.com",
       "role": "Super Admin",
       "expiresAt": "2026-10-14T11:45:52.618940Z",
+      "admin": true,
+      "subscriber": false
+    },
+    {
+      "tokenHash": "969bb98452a4f68e97193fa22f45364448d9c6f87d5ec8d6f74a42cfc11b1696",
+      "email": "adminmagelangekspress@gmail.com",
+      "role": "Super Admin",
+      "expiresAt": "2026-10-15T09:46:21.101982Z",
       "admin": true,
       "subscriber": false
     }
